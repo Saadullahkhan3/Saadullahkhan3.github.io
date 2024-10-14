@@ -1,5 +1,5 @@
 # Saadullah Khan
 
-I am very beginner in Web dev and I am trying github.io hosting.
+I'm Saadullah Khan and SuperNova
 
 ## [Saadullah Khan | Portfolio](https://Saadullahkhan3.github.io)
