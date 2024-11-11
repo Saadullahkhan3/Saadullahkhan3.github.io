@@ -1,13 +1,31 @@
+#skills{
+    border: 22px solid rgba(255, 255, 255, 0);
+}
+
+.skills-icons{
+    width: 100%;
+    height: 480px;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.2px);
+    -webkit-backdrop-filter: blur(18.2px);
+}
+.wrapper-infinite-scroll{
+}
+
 .wrapper-infinite-scroll{
     margin-top: 4rem;
 
     width: 100%;
-    /* height: fit-content; */
-    /* min-height: 150px; */
     height: fit-content;
     height: 150px;
-    /* max-height: 200px; */
     margin-inline: auto;
+
+    
+
 
     position: relative;
 }
@@ -18,6 +36,8 @@
 */
 
 .infinite-scroll{
+
+
     width: 100%;
     height: 100%;
     /* padding: 1rem; */
@@ -30,8 +50,13 @@
         rgba(0, 0, 0, 1) 20%,
         rgba(0, 0, 0, 1) 80%,
         rgba(0, 0, 0, 0)
-    );
+    );    
 }
+.infinite-scroll:hover .scroll-item{
+/* .scroll-item:hover{ */
+    animation-play-state: paused!important;
+}
+
 .scroll-item{
     position: absolute;
     width: 100px;
@@ -39,6 +64,7 @@
     border-radius: 5px;
 
     margin-top: 2rem;
+
 
     left: max(calc(200px * var(--quantity)), 100%);
 
@@ -53,7 +79,7 @@
     justify-content: center;
 
     /* transition: 200ms ease-in; */
-    /* transition: 200ms ease-in-out; */
+    transition: 200ms ease-in-out;
 
     top: 0px;
 
@@ -69,6 +95,7 @@
         scale: 1;
         /* scale: max(1, 5); */
         transition: 400ms  ease-in-out;
+        /* fill: #000; */
 
     }
     .sm-svg{
@@ -113,9 +140,10 @@
     background: #000;
 }
 .scroll-item:hover{
+    
     /* background-color: i; */
     svg{
-        rotate: 360deg;
+        /* rotate: 360deg; */
     }
     scale: 1.1;
     /* rotate: 20deg; */
@@ -123,7 +151,7 @@
 }
 .infinite-scroll:hover .scroll-item:not(:hover),
 .infinite-scroll:not(:hover){
-    opacity: 0.3;
+    /* opacity: 0.3; */
 }
 
 

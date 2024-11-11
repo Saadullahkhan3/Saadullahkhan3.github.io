@@ -13,21 +13,31 @@ const MouseFollowerSkewser = () => {
     var xprev = 0;
     var yprev = 0;
 
-    window.addEventListener("mousemove", function(dets){
-        this.clearTimeout(timeout);
+    var cX;
+    var cY;
 
-        xscale = gsap.utils.clamp(0.6, 1.4, dets.clientX - xprev);
-        yscale = gsap.utils.clamp(0.6, 1.4, dets.clientX - yprev);
+    function mouseEvent(eventName){
+      window.addEventListener(eventName, function(dets){
+          this.clearTimeout(timeout);
+  
+          xscale = gsap.utils.clamp(5, 5, dets.clientX - xprev);
+          yscale = gsap.utils.clamp(5, 5, dets.clientX - yprev);
+  
+          xprev = dets.clientX;
+          yprev = dets.clientY;
+  
+          MouseFollower(xscale, yscale);
+  
+          timeout = setTimeout(function(){
+              document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}px ,${dets.clientY}px) scale(1, 1)`
+              // document.querySelector("#minicircle").style.transform = `translate(500px ,500px) scale(1, 1)`
+          }, 100)
+      })
 
-        xprev = dets.clientX;
-        yprev = dets.clientY;
-
-        MouseFollower(xscale, yscale);
-
-        timeout = setTimeout(function(){
-            document.querySelector("#minicircle").style.transform = `translate(${dets.clientX}px ,${dets.clientY}px) scale(1, 1)`
-        }, 100)
-    })
+    }
+    mouseEvent("mousemove")
+    mouseEvent("scroll")
+    document.querySelector("#minicircle").style.transform = `translate(${xprev}px ,${yprev}px) scale(1, 1)`
 }
 
 const MouseFollower = (xscale, yscale) => {

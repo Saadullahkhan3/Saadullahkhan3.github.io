@@ -78,7 +78,7 @@ const MouseFollowerForImage = () => {
 const MouseFollower2 = (xscale, yscale) => {
     window.addEventListener("mousemove", function detail(dets){
         for( let elem of document.querySelectorAll(".project .thumbnail img")){
-            console.log(elem)
+            // console.log(elem)
             elem.style.transform = `translate(${dets.clientX}px ,${dets.clientY}px) scale(${xscale}, ${yscale})`
 
         }
@@ -162,6 +162,7 @@ function addClassInNavElem(){
     let navLiAnchor = document.querySelectorAll("nav ul li a");
     navLiAnchor.forEach((a)=>{
     if (a.href  == currentURL){
+        console.log("currentURL -> ", a.closest("li"));
         a.classList.add("currentURL");
     }
     else{
@@ -183,8 +184,9 @@ function initScrollSpy(navSelector, offset = 250) {
         sections.forEach((section, index) => {
             if (scrollPos >= section.offsetTop && scrollPos < section.offsetTop + section.offsetHeight) {
                 // Highlight current navigation link
-                navLinks.forEach(link => link.classList.remove('currentURL'));
-                navLinks[index].classList.add('currentURL');
+                navLinks.forEach(link => link.closest("li").classList.remove('currentURL'));
+                // navLinks[index].classList.add('currentURL');
+                navLinks[index].closest("li").classList.add('currentURL');
             }
         });
     }

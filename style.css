@@ -14,8 +14,21 @@ html{
     /* outline: 1px solid red; */
     max-width: 100%;
 }
-
-
+body{
+    /* background-image: url("./images/bg/straight-line-with-twisted-line-horizontal.jpg"); */
+    background-image: url("./images/bg/straight-line-with-twisted-line-vertical.jpg");
+    background-size: cover;
+    background-position: center;
+}
+#minicircle{
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    width: 12px;
+    height: 12px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99999;
+}
 
 /* +++++++++++++++  HEADER  +++++++++++++++  */
 header{
@@ -31,19 +44,14 @@ header{
     top: 0;
     z-index: 99999;
 
-
-
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.24);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.2px);
+    -webkit-backdrop-filter: blur(18.2px);
 }
-/* header::after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    z-index: -99;
-    background: #fff;
-} */
+
 header .logo{
     h1{
         border-bottom: 5px solid #000;
@@ -100,36 +108,26 @@ header nav ul li::after{
     
 }
 header nav ul li:hover::after {
-    animation: showLine .5s;
+    animation: showLine .5s forwards;
+
+}
+
+.currentURL{
+    /* overflow: ; */
+    border-bottom: 4px solid red;
     width: 100%;
+    animation: none;
     visibility: visible;
+    position: relative;
     transition: 200ms;
-    /* border-bottom: 4px solid rgb(53, 53, 175);     */   
+    z-index: 2;
 }
-/* ----------------------------------------------------------------------- */
-/* ----------------------------------------------------------------------- */
-header nav ul li{
-    .currentURL{
-        /* overflow: ; */
-        border-bottom: 4px solid red;
-        width: 100%;
-        animation: none;
-        visibility: visible;
-        position: relative;
-        transition: 200ms;
-        z-index: 2;
-        /* background: #fff; */
-    }
-    
+li.currentURL::after{
+    display: none;
 }
-header nav ul li .currentURL{
 
-
-    width: 100%;
     
-    background: #fff;
 
-  }
 /* ----------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------- */
 
@@ -151,14 +149,13 @@ section{
     scroll-snap-align: start;
 
     /* Without 'border' property nav bar shifting heading at top: 0 while border fix them */
+    /* border: none; */
     border: 2px solid rgba(255, 255, 255, 0);
 
-    border-bottom: 2px solid #000; 
+    /* background: #000; */
 
 }
-section:nth-child(1){
-    border-top: 1px solid #000;
-}
+
 .section-to-top{
     top: 0%;
     background: royalblue;
@@ -222,11 +219,30 @@ section:nth-child(1){
         background-color: rgb(162, 212, 184);
     }
 }
+@keyframes bg-anime {
+    to{
+        background-position: bottom;
+    }
+}
 .home{
+    /* background-image: url("./images/bg/white-jiggle-line.png"); */
+    /* background-image: url("./images/bg/straight-line-with-twisted-line.jpg"); */
+    /* background-image: url("./images/bg/black-lines.jpg"); */
+    /* background-image: url("./images/bg/twisted-roll-blue-gradient.jpg"); */
+    /* background-image: url("./images/bg/white-jiggle-line.svg"); */
+    /* background-image: url("./images/bg/"); */
+    
+    background-size: cover;
+    background-position: top;
+    /* animation: bg-anime 100s linear infinite alternate; */
+
     position: relative;
     z-index: 0;
     padding: 1rem;
     .circle{
+
+        display: none;
+
         width: 80%;
         height: 60%;
         filter: blur(8rem);
@@ -260,7 +276,7 @@ section:nth-child(1){
 
 .project-wrapper{
     padding: 2rem 4rem;
-    border: 2px solid #999999;
+    /* border: 2px solid #999999; */
     border-radius: 10px;
     margin-bottom: 80px;
 }
@@ -273,7 +289,7 @@ section:nth-child(1){
     /* border-radius: 6px; */
     /* box-shadow: #000; */
     /* border: 2px solid #999999; */
-    border-bottom: 2px solid #999999;
+    /* border-bottom: 2px solid #999999; */
     min-height: 150px;
 
     padding: 2rem 1rem;
@@ -285,6 +301,12 @@ section:nth-child(1){
 
     margin-bottom: 30px;
 
+    background: rgba(255, 255, 255, 0.24);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.2px);
+    -webkit-backdrop-filter: blur(18.2px);
+
 
 }
 .project .thumbnail{
@@ -293,6 +315,8 @@ section:nth-child(1){
 
     object-fit: cover;
 
+    border-radius: inherit;
+
     transform-style: preserve-3d;
     transform:  perspective(1000px);
 
@@ -300,7 +324,7 @@ section:nth-child(1){
         object-fit: cover;
         max-width: 100%;
         max-height: 100%;
-        border-radius: 6px;
+        border-radius: inherit;
         transition: 300ms;
     }
 }
@@ -366,15 +390,36 @@ section:nth-child(1){
 
 /* ++++++++++++++++++++ FOOTER  ++++++++++++++++  */
 footer{
-    width: 100%;
-    height: 100px;
-    background: #000;
 
+}
+footer {
+    color: #000000;
+    padding: 40px 20px;
+    text-align: center;
+
+    width: 100%;
+    /* height: 100px; */
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.24);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.2px);
+    -webkit-backdrop-filter: blur(18.2px);
+    
+}
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-content p {
+    margin: 5px 0;
 }
 
 
 
-@media (max-width:980px) {
+@media (max-width:1024px) {
     main{
         padding: 0 2rem;
     }
@@ -390,7 +435,7 @@ footer{
     }
     
     .project{
-        padding: 1rem 0.5rem;
+        padding: 2rem;
         
         display: block;
 
@@ -407,7 +452,7 @@ footer{
     
     }
     .project .details{
-        padding: 0 0.5rem;
+        /* padding: 0 2rem; */
         /* height: 100%; */
         width: 100%;
     
@@ -425,50 +470,90 @@ footer{
     
 }
 
-@media (max-width: 380px) {
-    
-    main{
-        padding: 0 10px;
+@media (max-width: 768px) {
+    /* Your tablet portrait styles */
+    footer .footer-content{
+        cite{
+            display: block;
+        }
+        span{
+            display: none;
+        }
+    }
+  }
+
+@media (max-width: 480px) {
+    /* Main layout adjustments */
+    main {
+        padding: 0 1rem;
     }
 
-    .project-wrapper{
-        padding: 4px 8px;
-        /* margin-bottom: 80px; */
-    }
-    .project:last-child{
-        border-bottom: none;
+    /* Header adjustments */
+    header {
+        padding: 1rem;
     }
     
-    .project{
-        padding: 8px 4px;
+    /* Section adjustments */
+    .section-heading {
+        font-size: 8vmax;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    /* Home section */
+    .home {
+        padding: 0.5rem;
+    }
+    .home .primary-heading {
+        margin-top: 15vh;
+        font-size: 12vw;
+    }
+    .home .secondary-heading {
+        font-size: 8vw;
+    }
+
+    /* Project section adjustments */
+    .project-wrapper {
+        padding: 0.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .project {
+        padding: 0.75rem;
+        margin-bottom: 20px;
+    }
+    
+    .project .details {
+        padding: 0;
+        gap: 12px;
+    }
+    
+    .project .details h3 {
+        margin-top: 12px;
+        font-size: 7vw;
+    }
+    
+    .project .details p {
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+    
+    /* Project links adjustments */
+    .project .details .project-links {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .project .details .project-links a {
+        padding: 0.4rem 0.8rem;
         
-        display: block;
-
-        /* margin-bottom: 30px; */
-    }
-    .project .thumbnail{
-        /* max-height: 100%; */
-        max-width: 100%;
-    
-        object-fit: cover;
-    
-        transform-style: preserve-3d;
-        transform:  perspective(1000px);
-    
-    }
-    .project .details{
-        padding: 0 5px;
-        /* height: 100%; */
-        width: 100%;
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    
-        gap: 18px;
-    }
-    .project .details h3{
-        margin-top: 15px;
-        font-size: 15vw;
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        
+        span {
+            font-size: 0.9rem;
+        }
     }
 }

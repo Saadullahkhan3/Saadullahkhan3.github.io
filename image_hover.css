@@ -1,12 +1,4 @@
-#minicircle{
-    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
-    width: 12px;
-    height: 12px;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 99999;
-}
+
 
 
 
@@ -25,34 +17,36 @@
     list-style: none;
     font-size: 3.2vw;
     
-    padding: 1.8vw 0;
-    border-bottom: 2px solid #52b3a2;
+    transition: 200ms;
 
+    padding: 1.8vw 1vw;
+    /* border-bottom: 2px solid #52b3a2; */
+    margin-bottom: 8px;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.24);
+    /* border-radius: 16px; */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.2px);
+    -webkit-backdrop-filter: blur(18.2px);
+    animation: changeTextColor .5s forwards;
+
+    border-radius: 16px;
+}
+/* Elements next to hover elem  */
+.elem:hover + *,
+.elem:hover + * + *,
+.elem:hover + * + * + *,
+/* Elements before hover elem  */
+.elem:has(+ *:hover),
+.elem:has(+ * + *:hover),
+.elem:has(+ * + * + *:hover){
+    opacity: 0.3;
 }
 .elem a{
     transition: 200ms;
     color: #004b94;
-}
-
-.elem a:hover{
-    animation: changeTextColor .5s forwards;
-    font-size: 110%;
-    font-weight: 500;
-
-    + img, + svg{
-        display: none;
-    }
-}
-.elem a:after{
-    content: "";
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    background: #000000;
-    transition: 300ms ease-in-out;
+    
 }
 @keyframes showLine {
     from{
@@ -68,16 +62,41 @@
 }
 @keyframes changeTextColor {
     to{
-        color: #fff;
+        color: rgb(255, 255, 255, 80%);
     }
 }
-.elem a:hover:after {
-    animation: showLine .5s;
-    width: 100%;
-    visibility: visible;
+.elem a:hover{
+
+
+    border-radius: 16px;
+
+
+    /* font-size: 110%; */
+    padding-left: 3vw;
+    /* opacity: 0.7; */
+    font-weight: 500;
+
+    + img, + svg{
+        display: none;
+    }
 }
+/* .elem a:after{
+    content: "";
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    transition: 300ms ease-in-out;
+} */
+/* .elem a:hover:after {
+    animation: showLine .5s forwards;
+} */
+
+
 .elem:nth-child(1){
-    border-top: 2px solid #52b3a2;
+    /* border-top: 2px solid #52b3a2; */
 }
 .elem .hover-small-svg{
     scale: 1.4;
@@ -85,7 +104,7 @@
 .elem svg, .elem img{
     fill: #000;
     pointer-events: none;
-    z-index: 999999;
+    z-index: 9999999999;
     opacity: 0;
     position: absolute;
     width: 200px;
@@ -105,3 +124,10 @@
         /* fill: blue; */
     }
 }
+
+
+
+/* .elem:hover .elem:not(:hover),
+.elem:not(:hover){
+    opacity: 0.3;
+} */
