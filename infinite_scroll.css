@@ -78,37 +78,24 @@
     align-items: center;
     justify-content: center;
 
-    /* transition: 200ms ease-in; */
     transition: 200ms ease-in-out;
 
     top: 0px;
 
     img,
     svg{
-        /* padding: 0.5rem; */
-        /* fill: black; */
-        /* fill: black */
-        /* size: 1fr; */
         width: 100px;
         height: 100px;
         width: fit-content;
         scale: 1;
-        /* scale: max(1, 5); */
         transition: 400ms  ease-in-out;
-        /* fill: #000; */
 
-    }
-    .sm-svg{
-        scale: 8;
     }
 }
 .infinite-scroll[reverse="true"] .scroll-item{
     animation-name: infinite-scroll-right-animation;
 }
 @keyframes infinite-scroll-left-animation {
-    from{
-        /* top: -50px; */
-    }
     to{
         left: -200px;
     }
@@ -116,37 +103,20 @@
 @keyframes infinite-scroll-right-animation {
     from{
         left: -200px;
-        /* top: 50px; */
-    }
-    to{
-        /* top: -50px; */
     }
 }
 
-.svg-red{
-    fill: red
-
-}
-.python-svg{
-    fill: linear-gradient(to bottom, yellow, blue);
-}
-.svg-blue{
-    fill: blueviolet
-}
-.svg-yellow{
-    fill: yellow;
-}
-.svg-bg-black{
-    background: #000;
+.django-svg{
+    fill: #0d2e1e;
 }
 .scroll-item:hover{
+    scale: 1.1;
     
-    /* background-color: i; */
+    
     svg{
         /* rotate: 360deg; */
     }
-    scale: 1.1;
-    /* rotate: 20deg; */
+    
 
 }
 .infinite-scroll:hover .scroll-item:not(:hover),
@@ -155,3 +125,47 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+.hover-info-container > div::before{
+    content: attr(data-social);
+    position: absolute;
+    background-color: var(--accent-color);
+    color: #000;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 100px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.09);
+    transform: translateX(30px) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+  }
+  
+  .hover-info-container > div::after{
+    content: '';
+    position: absolute;
+    height: 0;
+    width: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 10px solid var(--accent-color);
+    transform: translateY(0) rotate(25deg);
+    opacity: 0;
+    transition: 200ms cubic-bezier(.42,0,.44,1.68);
+  }
+  .hover-info-container > div:hover::before{
+    transform: translateX(90px) rotate(0);
+    opacity: 1;
+  }
+  .hover-info-container > div:hover::after{
+    transform: translateX(45px) rotate(90deg);
+    opacity: 1;
+  }

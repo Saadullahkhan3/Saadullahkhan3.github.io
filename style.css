@@ -42,6 +42,7 @@ header{
     padding: 1rem 4rem;
 
     position: sticky;
+    /* position: absolute; */
     top: 0;
     z-index: 99999;
 
@@ -210,7 +211,7 @@ section{
 .bounding-right{
     /* text-align: right; */
     /* background-color: royalblue; */
-    margin-left: 30%;
+    /* margin-left: 30%; */
     /* width: 100%; */
 }
 @keyframes circleMover {
@@ -226,12 +227,14 @@ section{
     }
 }
 .home{
-    /* background-image: url("./images/bg/white-jiggle-line.png"); */
-    /* background-image: url("./images/bg/straight-line-with-twisted-line.jpg"); */
-    /* background-image: url("./images/bg/black-lines.jpg"); */
-    /* background-image: url("./images/bg/twisted-roll-blue-gradient.jpg"); */
-    /* background-image: url("./images/bg/white-jiggle-line.svg"); */
-    /* background-image: url("./images/bg/"); */
+    /* height: calc(100vh - 14vh); */
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "item1 item4"
+    "item2 item4"
+    "item3 item4";
     
     background-size: cover;
     background-position: top;
@@ -258,7 +261,7 @@ section{
         animation: circleMover 3s linear infinite alternate;
     }
     .primary-heading{
-        margin-top: 20vh;
+        margin-top: 14vh;
         text-align: left;
         font-size: 10vw;
         margin-bottom: 0;
@@ -269,10 +272,154 @@ section{
         margin-top: 0;
         font-size: 6vw;
         /* line-height: 6vw; */
-        text-align: right;
+        /* text-align: right; */
         color: #0aa8a0;
     }
+
 }
+.name-heading{
+    grid-area: item1;
+}
+.sub-heading{
+    grid-area: item2;
+}
+.ctas{
+    margin-top: 14vh;
+    /* width: 100%; */
+    grid-area: item4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: relative; */
+    /* position: static;
+    top: 35%;
+    right: 100px; */
+}
+.ctas .cta-btn{
+    margin-top: 14vh;
+    cursor: pointer;
+    /* width: ; */
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 16px;
+    color: #000;
+    /* From https://css.glass */
+    /* border-radius: 16px; */
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.2px);
+    -webkit-backdrop-filter: blur(18.2px);
+    /* color: white; */
+    transition: 300ms ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span{
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    svg{
+        width: 32px;
+        height: 32px;
+        /* height: 0; */
+        /* fill: white; */
+        fill: #000;
+        /* fill: transparent; */
+        transition: 200ms ease-in-out;
+        /* visibility: hidden; */
+
+    }
+}
+
+.cta-btn:hover{
+    background: rgba(255, 255, 255, 0.24);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(18.2px);
+    -webkit-backdrop-filter: blur(18.2px);
+    /* scale: 1.1; */
+
+    svg{
+        /* width: 32px; */
+        fill: #000;
+        rotate: 20deg;
+
+        /* width: 32px; */
+        /* visibility: visible;    */
+    }
+}
+/* .cta-btn::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: red;
+
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg) rotateX(0deg);
+    transition: 200ms;
+}
+@keyframes cube-move {
+    from{
+        transform: translate(-50%, -50%) rotate(45deg) rotateX(0deg);
+    }
+    to{
+        transform: translate(-50%, -50%) rotate(45deg) rotateX(360deg);
+    }
+}
+.cta-btn::after{
+    --rotate-deg: -45deg;
+    content: "";
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: yellow;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg) rotateX(0deg);
+    transition: 200ms;
+}
+.cta-btn:hover::before{
+    animation: cube-move 3s infinite alternate;
+}
+.cta-btn:hover::after{
+    animation: cube-move 3s infinite alternate;
+} */
+.home-about{
+    /* margin-top: rem; */
+    grid-area: item3;
+    /* width: 80%; */
+    width: 100%;
+    margin-top: 0;
+    min-height: 20vh;
+    padding: 2rem;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.24);
+    /* border-radius: 16px; */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.2px);
+    -webkit-backdrop-filter: blur(18.2px);
+
+    border-radius: 16px;
+
+}
+.about-me{
+    grid-column: 1 / -1;
+    grid-row: 1; 
+    h3{
+        font-weight: 300;
+        font-size: 1.8rem;
+    }
+    h4{
+        font-weight: 300;
+        font-size: 1.4rem;
+    }
+}
+
 
 :root {
 	--cards: 4;
@@ -302,28 +449,8 @@ section{
 	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
 	margin-bottom: var(--cardMargin);
 }
-
-
-/* .cards {
-	list-style: none;
-	padding-left: 0;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: repeat(var(--cards), var(--cardHeight));
-	gap: var(--cardMargin);
-	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-	margin-bottom: var(--cardMargin);
-} */
-
-
-/* .card {
-	position: sticky;
-	top: 0;
-    top: 10%;
-} */
 .card:nth-child(1){
     top: 10%;
-    /* margin-top: 20vh; */
 }
 .card-body {
 
@@ -341,8 +468,6 @@ section{
 
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.24);
-    /* background: rgb(0, 0, 0); */
-    /* border-radius: 16px; */
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(18.2px);
     -webkit-backdrop-filter: blur(18.2px);
@@ -363,30 +488,11 @@ h2 {
 	top: 0;
     top: 10%;
     width: 100%;
-    /* border-radius: 6px; */
-    /* box-shadow: #000; */
-    /* border: 2px solid #999999; */
-    /* border-bottom: 2px solid #999999; */
-    /* min-height: 150px; */
-
-    /* padding: 2rem 1rem; */
     display: flex;
     align-items: center;
     justify-content: space-between;
-
     gap: 20px;
-
     border-radius: 16px;
-
-    /* margin-bottom: 30px; */
-
-    /* background: #000; */
-    /* background: rgba(255, 255, 255, 0.24);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(18.2px);
-    -webkit-backdrop-filter: blur(18.2px); */
-
-
 }
 .project .thumbnail{
     max-height: 100%;
@@ -501,54 +607,6 @@ footer .footer-content p {
 
 
 @media (max-width:1024px) {
-    main{
-        padding: 0 2rem;
-    }
-    header nav{
-        display: none;
-    }
-    .project-wrapper{
-        padding: 1rem 2rem;
-        /* margin-bottom: 80px; */
-    }
-    .project:last-child{
-        border-bottom: none;
-    }
-    
-    .project{
-        padding: 2rem;
-        
-        display: block;
-
-        /* margin-bottom: 30px; */
-    }
-    .project .thumbnail{
-        /* max-height: 100%; */
-        max-width: 100%;
-    
-        object-fit: cover;
-    
-        transform-style: preserve-3d;
-        transform:  perspective(1000px);
-    
-    }
-    .project .details{
-        /* padding: 0 2rem; */
-        /* height: 100%; */
-        width: 100%;
-    
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    
-        gap: 18px;
-    }
-    .project .details h3{
-        margin-top: 15px;
-        font-size: 5vw;
-    }
-
-    
 }
 
 @media (max-width: 768px) {
@@ -564,77 +622,4 @@ footer .footer-content p {
   }
 
 @media (max-width: 480px) {
-    /* Main layout adjustments */
-    main {
-        padding: 0 1rem;
-    }
-
-    /* Header adjustments */
-    header {
-        padding: 1rem;
-    }
-    
-    /* Section adjustments */
-    .section-heading {
-        font-size: 8vmax;
-        margin-top: 40px;
-        margin-bottom: 30px;
-    }
-
-    /* Home section */
-    .home {
-        padding: 0.5rem;
-    }
-    .home .primary-heading {
-        margin-top: 15vh;
-        font-size: 12vw;
-    }
-    .home .secondary-heading {
-        font-size: 8vw;
-    }
-
-    /* Project section adjustments */
-    .project-wrapper {
-        padding: 0.5rem;
-        margin-bottom: 40px;
-    }
-    
-    .project {
-        padding: 0.75rem;
-        margin-bottom: 20px;
-    }
-    
-    .project .details {
-        padding: 0;
-        gap: 12px;
-    }
-    
-    .project .details h3 {
-        margin-top: 12px;
-        font-size: 7vw;
-    }
-    
-    .project .details p {
-        font-size: 1rem;
-        line-height: 1.2rem;
-    }
-    
-    /* Project links adjustments */
-    .project .details .project-links {
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    
-    .project .details .project-links a {
-        padding: 0.4rem 0.8rem;
-        
-        svg {
-            width: 20px;
-            height: 20px;
-        }
-        
-        span {
-            font-size: 0.9rem;
-        }
-    }
 }
