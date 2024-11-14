@@ -227,6 +227,7 @@ section{
     }
 }
 .home{
+    /* max-height: 50vh; */
     /* height: calc(100vh - 14vh); */
     display: grid;
     grid-template-columns: 1fr auto;
@@ -261,7 +262,7 @@ section{
         animation: circleMover 3s linear infinite alternate;
     }
     .primary-heading{
-        margin-top: 14vh;
+        margin-top: 12vh;
         text-align: left;
         font-size: 10vw;
         margin-bottom: 0;
@@ -284,7 +285,7 @@ section{
     grid-area: item2;
 }
 .ctas{
-    margin-top: 14vh;
+    /* margin-top: 14vh; */
     /* width: 100%; */
     grid-area: item4;
     display: flex;
@@ -296,7 +297,7 @@ section{
     right: 100px; */
 }
 .ctas .cta-btn{
-    margin-top: 14vh;
+    margin-top: 12vh;
     cursor: pointer;
     /* width: ; */
     padding: 1rem 2rem;
@@ -394,7 +395,7 @@ section{
     /* width: 80%; */
     width: 100%;
     margin-top: 0;
-    min-height: 20vh;
+    max-height: 20vh;
     padding: 2rem;
 
     /* From https://css.glass */
