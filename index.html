@@ -4,28 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
-    <link rel="stylesheet" href="./infinite_scroll.css">
+    <link rel="stylesheet" href="./css/infinite_scroll.css">
 
-    <link rel="stylesheet" href="./hover_image_up.css">
+    <link rel="stylesheet" href="./css/hover_image_up.css">
 
-    <link rel="stylesheet" href="./image_hover.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="./css/image_hover.css">
 
     <title>Saadullah Khan - Portfolio</title>
 </head>
 
 <body>
-    <!-- <div id="minicircle"></div> -->
 
-    <header>
+    <header class="bg-glassmorphism">
         <div class="logo">
             <h1>Saadullah Khan</h1>
         </div>
@@ -45,28 +47,35 @@
             <div class="home-content">
                 <div class="bounding name-heading">
                     <h1 class="primary-heading bounding-elem ">Saadullah Khan</h1>
-            </div>
-
-            <div class="bounding bounding-right sub-heading">
-
-                <div class=" bounding-elem typewriter">
-                    <span id="text" class="secondary-heading"></span>
-                    <span class="secondary-heading cursor ">|</span>
                 </div>
+
+                <div class="bounding">
+
+                    <div class=" bounding-elem typewriter">
+                        <span id="text" class="secondary-heading"></span>
+                        <span class="secondary-heading cursor ">|</span>
+                    </div>
+                </div>
+                <div class="bounding">
+
+                    <div class="about-me bg-glassmorphism bounding-elem">
+                        <h3>Hi, I'm Saadullah Khan. I'm starting my journey in full-stack web development, and I'm
+                            really interested in building things that work well and look good.</h3>
+                    </div>
+                </div>
+
+
             </div>
-            
-            <div class="about-me">
-                <h3>I'm Saadullah Khan, a passionate web developer and designer with a knack for crafting user-friendly and visually appealing websites.</h3>
-            </div>
-            
-            </div>
-            <div class="ctas">
-                <a href="https://drive.google.com/file/d/1FeCxcL871XbSRgmBvnFeL12zZpOfhVYV/view?usp=sharing" target="_blank" class="cta-btn" id="my_resume">
+            <div class="ctas bounding-elem">
+                <a href="https://drive.google.com/file/d/1FeCxcL871XbSRgmBvnFeL12zZpOfhVYV/view?usp=sharing"
+                    target="_blank" class="cta-btn bg-glassmorphism" id="my_resume">
                     <svg viewBox="0 0 846.66 846.66" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M305.08 127c-27.16,0 -27.16,-41.29 0,-41.29l60.83 0 0 -54.93c0,-11.4 9.25,-20.64 20.65,-20.64l190.32 0c11.4,0 20.65,9.24 20.65,20.64l0 54.93 106.1 0c11.4,0 20.65,9.25 20.65,20.65l0 709.52c0,11.4 -9.25,20.64 -20.65,20.64l-560.6 0c-11.4,0 -20.65,-9.24 -20.65,-20.64l0 -709.52c0,-11.4 9.25,-20.65 20.65,-20.65l67.88 0c27.15,0 27.15,41.29 0,41.29l-47.24 0 0 668.23 519.32 0 0 -668.23c-125.97,0 -251.94,0 -377.91,0zm102.12 -41.29l149.04 0 0 -34.28 -149.04 0 0 34.28zm-191.92 480.71c-27.15,0 -27.15,-41.29 0,-41.29l188.46 0c27.16,0 27.16,41.29 0,41.29l-188.46 0zm0 156.73c-27.15,0 -27.15,-41.29 0,-41.29l188.46 0c27.16,0 27.16,41.29 0,41.29l-188.46 0zm0 -78.36c-27.15,0 -27.15,-41.29 0,-41.29l188.46 0c27.16,0 27.16,41.29 0,41.29l-188.46 0zm294.81 -101.94l121.29 0c11.4,0 20.64,9.25 20.64,20.65l0 121.28c0,11.4 -9.24,20.65 -20.64,20.65l-121.29 0c-11.4,0 -20.64,-9.25 -20.64,-20.65l0 -121.28c0,-11.4 9.24,-20.65 20.64,-20.65zm100.64 41.29l-79.99 0 0 80 79.99 0 0 -80zm-243.28 -252.09c13.62,0.23 24.62,-11.16 24.62,-24.62 0,-13.72 -10.9,-24.63 -24.62,-24.63 -13.69,0 -24.62,10.94 -24.62,24.63 0,13.48 10.98,24.85 24.62,24.62zm20.65 37.98l0 59.74c47.81,-9.73 82.31,-51.95 82.31,-100.88 0,-56.87 -46.09,-102.96 -102.96,-102.96 -56.86,0 -102.95,46.09 -102.95,102.96 0,48.93 34.49,91.15 82.31,100.88l0 -59.75c-26.78,-8.89 -45.28,-34.08 -45.28,-62.59 0,-36.3 29.62,-65.92 65.92,-65.92 36.29,0 65.92,29.63 65.92,65.92 0,28.49 -18.49,53.73 -45.27,62.6zm-20.65 -185.39c79.67,0 144.25,64.58 144.25,144.25 0,79.66 -64.58,144.24 -144.25,144.24 -79.66,0 -144.24,-64.58 -144.24,-144.24 0,-79.67 64.58,-144.25 144.24,-144.25z"/>
+                        <path
+                            d="M305.08 127c-27.16,0 -27.16,-41.29 0,-41.29l60.83 0 0 -54.93c0,-11.4 9.25,-20.64 20.65,-20.64l190.32 0c11.4,0 20.65,9.24 20.65,20.64l0 54.93 106.1 0c11.4,0 20.65,9.25 20.65,20.65l0 709.52c0,11.4 -9.25,20.64 -20.65,20.64l-560.6 0c-11.4,0 -20.65,-9.24 -20.65,-20.64l0 -709.52c0,-11.4 9.25,-20.65 20.65,-20.65l67.88 0c27.15,0 27.15,41.29 0,41.29l-47.24 0 0 668.23 519.32 0 0 -668.23c-125.97,0 -251.94,0 -377.91,0zm102.12 -41.29l149.04 0 0 -34.28 -149.04 0 0 34.28zm-191.92 480.71c-27.15,0 -27.15,-41.29 0,-41.29l188.46 0c27.16,0 27.16,41.29 0,41.29l-188.46 0zm0 156.73c-27.15,0 -27.15,-41.29 0,-41.29l188.46 0c27.16,0 27.16,41.29 0,41.29l-188.46 0zm0 -78.36c-27.15,0 -27.15,-41.29 0,-41.29l188.46 0c27.16,0 27.16,41.29 0,41.29l-188.46 0zm294.81 -101.94l121.29 0c11.4,0 20.64,9.25 20.64,20.65l0 121.28c0,11.4 -9.24,20.65 -20.64,20.65l-121.29 0c-11.4,0 -20.64,-9.25 -20.64,-20.65l0 -121.28c0,-11.4 9.24,-20.65 20.64,-20.65zm100.64 41.29l-79.99 0 0 80 79.99 0 0 -80zm-243.28 -252.09c13.62,0.23 24.62,-11.16 24.62,-24.62 0,-13.72 -10.9,-24.63 -24.62,-24.63 -13.69,0 -24.62,10.94 -24.62,24.63 0,13.48 10.98,24.85 24.62,24.62zm20.65 37.98l0 59.74c47.81,-9.73 82.31,-51.95 82.31,-100.88 0,-56.87 -46.09,-102.96 -102.96,-102.96 -56.86,0 -102.95,46.09 -102.95,102.96 0,48.93 34.49,91.15 82.31,100.88l0 -59.75c-26.78,-8.89 -45.28,-34.08 -45.28,-62.59 0,-36.3 29.62,-65.92 65.92,-65.92 36.29,0 65.92,29.63 65.92,65.92 0,28.49 -18.49,53.73 -45.27,62.6zm-20.65 -185.39c79.67,0 144.25,64.58 144.25,144.25 0,79.66 -64.58,144.24 -144.25,144.24 -79.66,0 -144.24,-64.58 -144.24,-144.24 0,-79.67 64.58,-144.25 144.24,-144.25z" />
                     </svg>
                     <span>My Resume</span>
                 </a>
+
             </div>
         </section>
 
@@ -75,7 +84,7 @@
         <section id="skills" class="Skills">
             <h2 class="section-heading">Skills</h2>
 
-            <div class="skills-icons">
+            <div class="skills-icons bg-glassmorphism">
                 <div class="wrapper-infinite-scroll">
 
                     <div class="infinite-scroll hover-info-container" style="
@@ -388,17 +397,13 @@
 
         <section id="projects" class="Projects">
             <h2 class="section-heading">Projects</h2>
-
-
             <div class="container">
-
                 <ul class="project-wrapper">
-                    <!-- <ul class="cards"> -->
                     <li class="project" style="--index: 1">
-                        <div class="card-body">
+                        <div class="card-body bg-glassmorphism">
                             <div class="thumbnail">
-                                <!-- <img src="./images/project/digital-ilm-2.webp" alt="Thumbnail for Digital ilm project."> -->
-                                <img src="./images/project/digital-ilm-1.webp" alt="Thumbnail for Digital ilm project.">
+                                <img src="./images/project/digital-ilm-1.webp"
+                                    alt="Thumbnail for Digital ilm project (generated by Dall-E/Chat GPT).">
                             </div>
                             <div class="details">
                                 <h3>Digital ilm</h3>
@@ -434,9 +439,10 @@
                         </div>
                     </li>
                     <li class="project" style="--index: 2">
-                        <div class="card-body">
+                        <div class="card-body bg-glassmorphism">
                             <div class="thumbnail">
-                                <img src="./images/project/landscape-1.webp" alt="">
+                                <img src="./images/project/landscape-1.webp"
+                                    alt="Thumbnail for SUK AUTH Validation project (generated by Dall-E/Chat GPT).">
                             </div>
                             <div class="details">
                                 <h3>SUK AUTH Validation</h3>
@@ -473,9 +479,10 @@
                         </div>
                     </li>
                     <li class="project" style="--index: 3">
-                        <div class="card-body">
+                        <div class="card-body bg-glassmorphism">
                             <div class="thumbnail">
-                                <img src="./images/project/product-order-and-database-manager-1.webp" alt="">
+                                <img src="./images/project/product-order-and-database-manager-1.webp"
+                                    alt="Thumbnail for Product Order and Database Manager project (generated by Dall-E/Chat GPT).">
                             </div>
                             <div class="details">
                                 <h3>Product Order and Database Manager</h3>
@@ -511,7 +518,6 @@
                         </div>
                     </li>
                 </ul>
-                <!-- </div> -->
             </div>
 
         </section>
@@ -520,11 +526,10 @@
         <section id="contact" class="Contact">
             <h2 class="section-heading">Contact</h2>
             <div id="showcase">
-                <!-- <h2>Contact</h2> -->
                 <ul>
 
-                    <li class="elem">
-                        <a href="https://www.github.com/Saadullahkha+n3">
+                    <li class="elem bg-glassmorphism">
+                        <a href="https://www.github.com/Saadullahkhan3">
                             GitHub
                         </a>
                         <svg class="hover-small-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
@@ -534,13 +539,10 @@
                             </path>
                         </svg>
                     </li>
-                    <li class="elem">
+                    <li class="elem bg-glassmorphism">
                         <a href="https://www.linkedin.com/in/Saadullahkhan3">
                             Linkedin
                         </a>
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                            <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
-                        </svg> -->
                         <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                         <svg width="800px" height="800px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                             fill="none">
@@ -548,31 +550,10 @@
                                 d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z" />
                         </svg>
                     </li>
-                    <li class="elem">
+                    <li class="elem bg-glassmorphism">
                         <a href="mailto:SaadForContact@gmail.com">
                             Email
                         </a>
-                        <!-- <svg height="800px" width="800px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	                    viewBox="0 0 512 512"  xml:space="preserve">
-                        <style type="text/css">
-                            .st0{fill:#000000;}
-                        </style>
-                        <g>
-                            <path class="st0" d="M510.678,112.275c-2.308-11.626-7.463-22.265-14.662-31.054c-1.518-1.915-3.104-3.63-4.823-5.345
-                                c-12.755-12.818-30.657-20.814-50.214-20.814H71.021c-19.557,0-37.395,7.996-50.21,20.814c-1.715,1.715-3.301,3.43-4.823,5.345
-                                C8.785,90.009,3.63,100.649,1.386,112.275C0.464,116.762,0,121.399,0,126.087V385.92c0,9.968,2.114,19.55,5.884,28.203
-                                c3.497,8.26,8.653,15.734,14.926,22.001c1.59,1.586,3.169,3.044,4.892,4.494c12.286,10.175,28.145,16.32,45.319,16.32h369.958
-                                c17.18,0,33.108-6.145,45.323-16.384c1.718-1.386,3.305-2.844,4.891-4.43c6.27-6.267,11.425-13.741,14.994-22.001v-0.064
-                                c3.769-8.653,5.812-18.171,5.812-28.138V126.087C512,121.399,511.543,116.762,510.678,112.275z M46.509,101.571
-                                c6.345-6.338,14.866-10.175,24.512-10.175h369.958c9.646,0,18.242,3.837,24.512,10.175c1.122,1.129,2.179,2.387,3.112,3.637
-                                L274.696,274.203c-5.348,4.687-11.954,7.002-18.696,7.002c-6.674,0-13.276-2.315-18.695-7.002L43.472,105.136
-                                C44.33,103.886,45.387,102.7,46.509,101.571z M36.334,385.92V142.735L176.658,265.15L36.405,387.435
-                                C36.334,386.971,36.334,386.449,36.334,385.92z M440.979,420.597H71.021c-6.281,0-12.158-1.651-17.174-4.552l147.978-128.959
-                                l13.815,12.018c11.561,10.046,26.028,15.134,40.36,15.134c14.406,0,28.872-5.088,40.432-15.134l13.808-12.018l147.92,128.959
-                                C453.137,418.946,447.26,420.597,440.979,420.597z M475.666,385.92c0,0.529,0,1.051-0.068,1.515L335.346,265.221L475.666,142.8
-                                V385.92z"/>
-                        </g>
-                        </svg> -->
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             width="256" height="256" viewBox="0 0 256 256" xml:space="preserve">
 
@@ -596,13 +577,10 @@
                         </svg>
                     </li>
                     </li>
-                    <li class="elem">
+                    <li class="elem bg-glassmorphism">
                         <a href="https://youtube.com/@SaadullahKhan3">
                             Youtube
                         </a>
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                            <path d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z"></path>
-                            </svg> -->
                         <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
                         <svg width="800px" height="800px" viewBox="5.368 5.414 53.9 53.9"
                             xmlns="http://www.w3.org/2000/svg">
@@ -619,44 +597,6 @@
                 </ul>
             </div>
         </section>
-
-
-        <!--         
-        <section id="contact2" class="Contact">
-            <h2 class="section-heading">Contact</h2>
-
-
-            <div class="hover-image-wrapper-center">
-
-            
-            <div class="hover-image-up-wrapper">
-                <div class="item">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                        <path d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"></path>
-                    </svg>
-                    <a href="https://www.github.com/Saadullahkhan3">/Saadullahkhan3</a>
-                </div>
-                <div class="item">
-
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 72 72">
-                        <path d="M36,12c13.255,0,24,10.745,24,24c0,10.656-6.948,19.685-16.559,22.818c0.003-0.009,0.007-0.022,0.007-0.022	s-1.62-0.759-1.586-2.114c0.038-1.491,0-4.971,0-6.248c0-2.193-1.388-3.747-1.388-3.747s10.884,0.122,10.884-11.491	c0-4.481-2.342-6.812-2.342-6.812s1.23-4.784-0.426-6.812c-1.856-0.2-5.18,1.774-6.6,2.697c0,0-2.25-0.922-5.991-0.922	c-3.742,0-5.991,0.922-5.991,0.922c-1.419-0.922-4.744-2.897-6.6-2.697c-1.656,2.029-0.426,6.812-0.426,6.812	s-2.342,2.332-2.342,6.812c0,11.613,10.884,11.491,10.884,11.491s-1.097,1.239-1.336,3.061c-0.76,0.258-1.877,0.576-2.78,0.576	c-2.362,0-4.159-2.296-4.817-3.358c-0.649-1.048-1.98-1.927-3.221-1.927c-0.817,0-1.216,0.409-1.216,0.876s1.146,0.793,1.902,1.659	c1.594,1.826,1.565,5.933,7.245,5.933c0.617,0,1.876-0.152,2.823-0.279c-0.006,1.293-0.007,2.657,0.013,3.454	c0.034,1.355-1.586,2.114-1.586,2.114s0.004,0.013,0.007,0.022C18.948,55.685,12,46.656,12,36C12,22.745,22.745,12,36,12z"></path>
-                        </svg>
-                        <a href="https://www.github.com/Saadullahkhan3">/Saadullahkhan3</a>
-                </div>
-                <div class="item">
-                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                        <path d="M 44.898438 14.5 C 44.5 12.300781 42.601563 10.699219 40.398438 10.199219 C 37.101563 9.5 31 9 24.398438 9 C 17.800781 9 11.601563 9.5 8.300781 10.199219 C 6.101563 10.699219 4.199219 12.199219 3.800781 14.5 C 3.398438 17 3 20.5 3 25 C 3 29.5 3.398438 33 3.898438 35.5 C 4.300781 37.699219 6.199219 39.300781 8.398438 39.800781 C 11.898438 40.5 17.898438 41 24.5 41 C 31.101563 41 37.101563 40.5 40.601563 39.800781 C 42.800781 39.300781 44.699219 37.800781 45.101563 35.5 C 45.5 33 46 29.398438 46.101563 25 C 45.898438 20.5 45.398438 17 44.898438 14.5 Z M 19 32 L 19 18 L 31.199219 25 Z"></path>
-                        </svg>
-                        <a href="https://www.github.com/Saadullahkhan3">/@Saadullahkhan3</a>
-                </div>
-                <div class="item">
-                    <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/new-post.png" alt="new-post"/>
-                    <a href="https://www.github.com/Saadullahkhan3">/Saadullahkhan3</a>
-                </div>
-            </div>
-            </div>
-        </section> -->
 
     </main>
 
@@ -685,17 +625,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"
-        integrity="sha512-1PKqXBz2ju2JcAerHKL0ldg0PT/1vr3LghYAtc59+9xy8e19QEtaNUyt1gprouyWnpOPqNJjL4gXMRMEpHYyLQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <!-- Locomotive  -->
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <script src="./image_hover.js"></script>
-    <script src="./script.js"></script>
+    <script src="./js/image_hover.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
