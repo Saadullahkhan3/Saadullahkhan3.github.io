@@ -252,7 +252,7 @@ section{
     padding: 1rem;
 
     .primary-heading{
-        margin-top: 14vh;
+        margin-top: 13vh;
         text-align: left;
         font-size: 10vw;
         margin-bottom: 0;
@@ -286,7 +286,7 @@ section{
 }
 .ctas .cta-btn{
     min-width: fit-content;
-    margin-top: 12vh;
+    margin-top: 10vh;
     cursor: pointer;
     /* width: ; */
     padding: 1rem 2rem;
@@ -330,6 +330,7 @@ section{
 .about-me{
     /* margin-top: rem; */
     /* grid-area: item3; */
+    min-height: 30vh;
     width: 80%;
     /* width: 100%; */
     /* margin-top: 0; */
