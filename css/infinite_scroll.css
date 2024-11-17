@@ -147,6 +147,13 @@
 
 }
 @media (max-width: 480px) {
-
+    /* .wrapper-infinite-scroll{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    } */
+    .skills-icons{
+        height: 580px;
+    }
 }
     
