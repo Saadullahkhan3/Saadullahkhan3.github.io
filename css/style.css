@@ -23,10 +23,7 @@ html{
     backdrop-filter: blur(18.2px);
     -webkit-backdrop-filter: blur(18.2px);
 }
-.normal-text{
-    font-weight: 300;
-    font-size: 1.4rem;
-}
+
 body{
     background-image: url("../images/bg/straight-line-with-twisted-line-vertical-2.jpg");
     background-size: cover;
@@ -138,8 +135,8 @@ section{
 }
 
 .section-heading{
-    margin-top: 70px;
-    margin-bottom: 50px;
+    margin-top: 80px;
+    /* margin-bottom: 50px; */
     text-align: center;
     font-size: 7vmax;
 }
@@ -216,6 +213,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: center;
+    min-width: fit-content;
 }
 .ctas .cta-btn{
     min-width: fit-content;
@@ -302,17 +300,18 @@ section{
 	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
 	margin-bottom: var(--cardMargin);
 }
-.card:nth-child(1){
-    top: 10%;
-}
+
 .card-body {
 	padding: 30px;
 	border-radius: 16px;
-	height: var(--cardHeight);
+	/* height: var(--cardHeight); */
+	/* height: var(--cardHeight); */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	transition: all 0.5s;
+
+    min-height: fit-content;
 }
 
 h2 {
@@ -320,15 +319,16 @@ h2 {
 }
 
 
-.project:last-child{
+/* .project:last-child{
     border-bottom: none;
-}
+} */
 
 .project{
     position: sticky;
 	top: 0;
     top: 10%;
     width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -364,6 +364,7 @@ h2 {
     display: flex;
     
     align-items: center;
+    flex-wrap: wrap;
     gap: 15px;
     
 }
@@ -407,20 +408,19 @@ h2 {
 
 
 /* ++++++++++++++++++++ FOOTER  ++++++++++++++++  */
-footer{
-
-}
 footer {
     color: #000000;
     padding: 40px 20px;
     text-align: center;
 
-    width: 100%;
+    min-width: 100%;
     /* height: 100px; */
 
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.24);
     /* border-radius: 16px; */
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(18.2px);
     -webkit-backdrop-filter: blur(18.2px);
@@ -438,10 +438,96 @@ footer .footer-content p {
 
 
 @media (max-width:1024px) {
+    main{
+        padding: 0 2rem;
+    }
+    
+
+    .about-me{
+        width: 90%;
+        /* padding: 1rem; */
+        h3{
+            font-size: 1.4rem;
+        }
+    }
+    .contact{
+        height: 50vh;
+    }
+    .project .thumbnail{
+        max-width: 40%;
+    }
+    .project .details p{
+        font-size: 1.4rem;
+    }
 }
 
+/* Your tablet portrait styles */
 @media (max-width: 768px) {
-    /* Your tablet portrait styles */
+
+    main{
+        padding: 0 2rem;
+    }
+    header .logo{
+        display: none;
+    }
+
+    .home{
+        grid-template-areas: 
+        "ctas ctas"
+        "home-content home-content"
+        "home-content home-content";
+        .primary-heading{
+            margin-top: 8vh;
+            text-align: left;
+            font-size: 10vw;
+            margin-bottom: 0;
+            line-gap-override: 1px;
+        }
+    }
+    .ctas .cta-btn{
+        /* padding: 0.5rem 1rem; */
+        span{
+            font-size: 1.2rem;
+        }
+    }
+    .project .details p{
+        /* font-size: 1.2rem; */
+    }
+
+
+
+    .card-body {
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+    .project{
+        top: 11%;
+        /* display: flex;
+        flex-direction: column; */
+        gap: 20px;
+    }
+    .project .thumbnail{
+        margin-top: 18px;;
+        max-width: 100%;
+    }
+    .details{
+        padding: 0 1rem;
+        min-width: 100%;
+        padding: 10px 0 2rem 1rem;
+        /* height: 70%; */
+        /* width: 70%; */
+    
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 18px;
+    }
+
+    .project .details p{
+        font-size: 1.2rem;
+    }
+
     footer .footer-content{
         cite{
             display: block;
@@ -450,7 +536,20 @@ footer .footer-content p {
             display: none;
         }
     }
-  }
+
+}
+
+
 
 @media (max-width: 480px) {
+    header{
+        display: none;
+        background: #000000!important;
+    }
+    main{
+        padding: 0 0.8rem;
+    }
 }
+
+
+
