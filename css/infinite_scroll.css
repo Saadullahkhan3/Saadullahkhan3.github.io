@@ -60,7 +60,7 @@
     left: max(calc(var(--size) * var(--quantity)), 100%);
 
     animation-name: infinite-scroll-left-animation;
-    animation-duration: 10s;
+    animation-duration: var(--duration);
     animation-timing-function: linear!important;
     animation-iteration-count: infinite!important;
 
@@ -111,6 +111,7 @@
 
 .hover-info-container > div::before{
     content: attr(data-social);
+    min-width: max-content;
     position: absolute;
     background-color: var(--accent-color);
     color: #000;
@@ -144,16 +145,17 @@
     
 }
 @media (max-width: 768px) {
-
+    .hover-info-container > div:hover::before{
+        transform: translateY(-55px);
+    }
+    .hover-info-container:nth-child(1) > div:hover::before{
+        transform: translateY(55px);
+        box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.09);
+    }
 }
 @media (max-width: 480px) {
-    /* .wrapper-infinite-scroll{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    } */
     .skills-icons{
-        height: 580px;
+        /* height: 580px; */
     }
 }
     

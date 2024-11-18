@@ -58,6 +58,7 @@ function infiniteScroll(){
             let formula = (duration / totalItems * (totalItems - index) * -1);         
             elem.style.animationDelay = `${formula}s`
             elem.style.animationDuration = `${duration}s`
+            console.log(elem.style.animationDuration);
         });
     }
 }
