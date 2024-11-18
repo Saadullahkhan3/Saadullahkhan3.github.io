@@ -142,7 +142,7 @@ const TypeWriter = (textElementId, texts_arr, typingSpeed=100, pauseBetweenTexts
     }
     typeWriterEffect();
 }
-const texts_arr = ["Software Engineer", "Web Developer"];
+const texts_arr = ["Web Developer", "Development"];
 TypeWriter("text", texts_arr);
 
     

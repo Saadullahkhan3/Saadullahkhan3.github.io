@@ -211,6 +211,7 @@ section{
     }
     .secondary-heading{
         margin-top: 0;
+        min-width: max-content;
         font-size: 7vw;
         color: #0aa8a0;
     }
