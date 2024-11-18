@@ -436,7 +436,7 @@ footer .footer-content p {
 }
 
 
-@media (max-width:1645px) {
+@media (max-width:1644px) {
     .project .thumbnail{
         /* margin-top: 18px;; */
         max-width: 50%;
@@ -446,7 +446,7 @@ footer .footer-content p {
     }
 
 }
-@media (max-width:1280px) {
+@media (max-width:1279px) {
     
     .card-body {
         padding: 14px;
@@ -477,7 +477,7 @@ footer .footer-content p {
     }
 }
 
-@media (max-width:1024px) {
+@media (max-width:1023px) {
     main{
         padding: 0 2rem;
     }
@@ -500,7 +500,7 @@ footer .footer-content p {
 }
 
 /* Your tablet portrait styles */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
 
     main{
         padding: 0 2rem;
@@ -528,11 +528,14 @@ footer .footer-content p {
             font-size: 1.2rem;
         }
     }
+    .project .thumbnail{
+        min-width: 100%;
+    }
     .project .details p{
         /* font-size: 1.2rem; */
     }
 
-    
+
     footer .footer-content{
         cite{
             display: block;
@@ -546,13 +549,16 @@ footer .footer-content p {
 
 
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
     header{
         display: none;
         background: #000000!important;
     }
     main{
         padding: 0 0.8rem;
+    }
+    .project .thumbnail{
+        min-width: 100%;
     }
 }
 

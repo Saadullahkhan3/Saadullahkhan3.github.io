@@ -92,7 +92,7 @@
 }
 @media (max-width: 768px) {
     .elem{
-        font-size: 5vmax;
+        /* font-size: 5vmax; */
     }
     .elem svg, .elem img{
         width: 80px;
