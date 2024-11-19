@@ -1,3 +1,9 @@
+const showMenu = () => {
+    document.querySelector("header nav ul").style.display = "flex";
+}
+
+
+
 // Header and Home
 const BoundingAnime = () => {
     var tl = gsap.timeline()

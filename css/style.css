@@ -13,7 +13,7 @@
     color: #fff;
 }
 :root {
-	--cards: 4;
+	--cards: 3;
 	--cardHeight: 87vh;
 	--cardTopPadding: 1.5em;
 	--cardMargin: 4vw;
@@ -59,10 +59,14 @@ header{
 }
 
 header .logo{
+    min-width: fit-content;
     h1{
         border-bottom: 5px solid #000;
         border-top: 5px solid #000;
     }
+}
+header nav .menu-btn{
+    display: none;
 }
 header nav ul{
     display: flex;
@@ -498,13 +502,16 @@ footer .footer-content p {
     main{
         padding: 0 2rem;
     }
-    header .logo{
-        display: none;
-    }
+
     .project .details .project-links a{
         scale: 0.9;
     }
+    section:nth-child(1){
+        /* min-height: 40vh; */
+    }
     .home{
+        /* background: #92929285; */
+        min-height: fit-content;
         grid-template-areas: 
         "home-content home-content"
         "ctas ctas"
@@ -517,12 +524,15 @@ footer .footer-content p {
         align-items: flex-start;
     }
     .ctas .cta-btn{
-        margin-top: 10px;
+        margin-top: 4vh;
         /* padding: 0.5rem 1rem; */
 
         span{
             font-size: 1.2rem;
         }
+    }
+    .about-me{
+        padding: 1rem;
     }
     .project .thumbnail{
         min-width: 100%;
@@ -547,8 +557,18 @@ footer .footer-content p {
         --font-nm-size: 1.2rem;
     }
     header{
+        height: 60px;
+        padding: 1rem;
+    }
+    header .logo{
+        scale: 0.8;
+    }
+    header nav ul{
         display: none;
-        background: #000000!important;
+    }
+    header nav .menu-btn{
+        display: flex;
+        align-items: center;
     }
     main{
         padding: 0 0.4rem;
