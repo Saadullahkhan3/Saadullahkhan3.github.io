@@ -327,7 +327,7 @@ h2 {
     border-radius: 16px;
 }
 .project:nth-child(2){
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
 }
 .project .thumbnail{
     max-height: 100%;
@@ -440,7 +440,42 @@ footer .footer-content p {
     }
 }
 @media (max-width:1279px) {
-    
+    :root{
+        --font-nm-size: 1.6rem;
+    }
+    /* .card-body {
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+    } */
+    /* .project{
+        top: 11%;
+        gap: 20px;
+    }
+    .project .thumbnail{
+        margin-top: 18px;;
+        max-width: 80%;
+    }
+    .details{
+        padding: 0 1rem;
+        min-width: 100%;
+        padding: 10px 0 2rem 1rem;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 18px;
+    } */
+    .project .thumbnail{
+        max-width: 45%;
+    }
+}
+
+@media (max-width:1023px) {
+    :root{
+        --font-nm-size: 1.6rem;
+    }
+    main{
+        padding: 0 2rem;
+    }
     .card-body {
         padding: 14px;
         display: flex;
@@ -454,7 +489,7 @@ footer .footer-content p {
     }
     .project .thumbnail{
         margin-top: 18px;;
-        max-width: 80%;
+        max-width: 60%;
     }
     .details{
         padding: 0 1rem;
@@ -468,31 +503,13 @@ footer .footer-content p {
         justify-content: space-between;
         gap: 18px;
     }
-}
-
-@media (max-width:1023px) {
-    :root{
-        --font-nm-size: 1.6rem;
-    }
-    main{
-        padding: 0 2rem;
-    }
     
-
     .about-me{
         width: 90%;
-        /* padding: 1rem; */
-        /* h3{
-            font-size: 1.4rem;
-        } */
     }
     .contact{
         height: 50vh;
     }
-
-    /* .project .details p{
-        font-size: 1.4rem;
-    } */
 }
 
 /* Your tablet portrait styles */
