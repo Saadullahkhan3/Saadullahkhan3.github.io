@@ -128,7 +128,7 @@ header .logo{
 }
 .active-nav-link{
     border-bottom: 4px solid red;
-    width: 100%;
+    /* width: 100%; */
     animation: none;
     visibility: visible;
     position: relative;
@@ -153,10 +153,10 @@ li.active-nav-link::after{
         padding: 1rem 2rem;
     }
     .nav-links-container{
-        background: rgba(255, 255, 255, 0.24);
+        /* background: rgba(255, 255, 255, 0.24);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(18.2px);
-        -webkit-backdrop-filter: blur(18.2px);
+        -webkit-backdrop-filter: blur(18.2px); */
         width: clamp(100px, 300px, 100%);
 
         flex-direction: column;
