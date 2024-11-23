@@ -84,6 +84,7 @@
 @media (max-width:1024px) {
     .elem{
         font-size: 4.2vmax;
+        border: 12px;
     }
     .elem svg, .elem img{
         width: 150px;
@@ -92,11 +93,10 @@
 }
 @media (max-width: 768px) {
     .elem{
-        /* font-size: 5vmax; */
+        border-radius: 10px;
     }
     .elem svg, .elem img{
         width: 80px;
         height: 80px;
-        /* fill: blue; */
     }
 }

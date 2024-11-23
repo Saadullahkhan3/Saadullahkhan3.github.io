@@ -28,19 +28,41 @@ html{
     font-family: 'Corbel', 'Trebuchet MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     max-width: 100%;
 }
+
+
+html::-webkit-scrollbar{
+    background: transparent;
+    color: transparent;
+}
+html::-webkit-scrollbar-button{
+    display: none;
+}
+html::-webkit-scrollbar-thumb{
+    background: rgba(255, 255, 255, 0.527);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.2px);
+    border-radius: 16px;
+}
+html::-webkit-scrollbar-track{
+    background: linear-gradient(to bottom, blue, lightblue, cyan, blue);
+}
+
+
+
 .bg-glassmorphism{
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.24);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(18.2px);
     -webkit-backdrop-filter: blur(18.2px);
-    /* backdrop-filter: blur(5px) */
 }
 
 body{
     background-image: url("../images/bg/straight-line-with-twisted-line-vertical-2.jpg");
     background-size: cover;
     background-position: center;
+
+    /* overflow: hidden; */
 }
 
 /* ++++++++++++++++++++++++++++  HEADER  ++++++++++++++++++++++++++++  */
@@ -138,24 +160,17 @@ li.active-nav-link::after{
     display: none;
 }
 
-
-
-
 #sidebar-active{
     display: none;
   }
 .open-sidebar-button, .close-sidebar-button{
     display: none;
 }
-@media(max-width: 759px){
-    
-}
-@media (max-width: 400px) {
-    header{
-        padding: 1rem;
-    }
 
-}
+
+
+
+
 
 main{
     width: 100%;
@@ -588,9 +603,6 @@ footer .footer-content p {
 
     .project .details .project-links a{
         scale: 0.9;
-    }
-    section:nth-child(1){
-        /* min-height: 40vh; */
     }
     .home{
         /* background: #92929285; */
