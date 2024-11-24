@@ -1,5 +1,3 @@
-
-
 // Header and Home
 const BoundingAnime = () => {
     var tl = gsap.timeline()
