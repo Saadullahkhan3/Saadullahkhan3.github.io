@@ -1,0 +1,41 @@
+name: Minify and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
+    - name: Install Dependencies
+      run: |
+        npm install -g html-minifier uglify-js cssnano-cli
+
+    - name: Minify Code
+      run: |
+        mkdir dist
+        html-minifier --input-dir ./src --output-dir ./dist --file-ext html --collapse-whitespace --remove-comments --minify-js --minify-css
+        cssnano ./src/styles.css ./dist/styles.min.css
+        uglifyjs ./src/script.js --compress --mangle --output ./dist/script.min.js
+
+    - name: Deploy to gh-pages
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git checkout gh-pages || git checkout --orphan gh-pages
+        cp -r ./dist/* .
+        git add .
+        git commit -m "Deploy minified files"
+        git push origin gh-pages --force
