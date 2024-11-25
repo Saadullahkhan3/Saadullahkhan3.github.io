@@ -1,11 +1,8 @@
 {
-    "cssnano": {
-        "preset": [
+    "preset": [
         "advanced",
         {
-          "reduceIdents": false
+            "reduceIdents": false
         }
-      ]
-      }
-  }
-  
+    ]
+}
