@@ -30,15 +30,17 @@ jobs:
       run: |
         mkdir dist
         html-minifier --input-dir ./ --output-dir ./dist --file-ext html --collapse-whitespace --remove-comments --minify-js --minify-css
-        cssnano ./css/styles.css ./dist/styles.min.css
+        cssnano ./css/style.css ./dist/style.min.css
+        cssnano ./css/image_hover.css ./dist/image_hover.min.css
+        cssnano ./css/infinite_scroll.css ./dist/infinite_scroll.min.css
+        cssnano ./css/hover_image_up.css ./dist/hover_image_up.min.css
         uglifyjs ./script.js --compress --mangle --output ./dist/script.min.js
 
     - name: Deploy to gh-pages
-      run: |
-        git config --global user.name "Saadullah Khan"
-        git config --global user.email "Saadullahkhan43251@gmail.com"
-        git checkout gh-pages || git checkout --orphan gh-pages
-        cp -r ./dist/* .
-        git add .
-        git commit -m "Deploy minified files"
-        git push origin gh-pages --force
+      uses: JamesIves/github-pages-deploy-action@4.1.0
+      with:
+        branch: gh-pages
+        # folder: build
+        
+
+
