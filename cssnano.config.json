@@ -1,6 +1,6 @@
 {
     "preset": [
-      "default",
+      "advanced",
       {
         "reduceIdents": { "keyframes": false }
       }
