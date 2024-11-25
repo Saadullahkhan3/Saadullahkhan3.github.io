@@ -2,9 +2,12 @@ name: Minify and Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main
-  workflow_dispatch: # Allow manual trigger
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
 
 jobs:
   build:
