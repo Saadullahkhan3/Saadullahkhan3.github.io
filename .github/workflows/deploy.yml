@@ -26,9 +26,9 @@ jobs:
     - name: Minify Code
       run: |
         mkdir dist
-        html-minifier --input-dir ./src --output-dir ./dist --file-ext html --collapse-whitespace --remove-comments --minify-js --minify-css
-        cssnano ./src/styles.css ./dist/styles.min.css
-        uglifyjs ./src/script.js --compress --mangle --output ./dist/script.min.js
+        html-minifier --input-dir ./ --output-dir ./dist --file-ext html --collapse-whitespace --remove-comments --minify-js --minify-css
+        cssnano ./css/styles.css ./dist/styles.min.css
+        uglifyjs ./script.js --compress --mangle --output ./dist/script.min.js
 
     - name: Deploy to gh-pages
       run: |
