@@ -1,0 +1,9 @@
+{
+    "preset": [
+      "default",
+      {
+        "reduceIdents": false
+      }
+    ]
+  }
+  
