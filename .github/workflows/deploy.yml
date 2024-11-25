@@ -32,7 +32,6 @@ jobs:
         cssnano ./css/style.css ./css/style.css  --config ./cssnano.config.json
         cssnano ./css/image_hover.css ./css/image_hover.css  --config ./cssnano.config.json
         cssnano ./css/infinite_scroll.css ./css/infinite_scroll.css  --config ./cssnano.config.json
-        cssnano ./css/hover_image_up.css ./css/hover_image_up.css  --config ./cssnano.config.json
         uglifyjs ./script.js --compress --mangle --output ./script.js
 
     - name: Deploy to gh-pages
