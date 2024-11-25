@@ -1,1 +1,98 @@
-#showcase{margin-top:8vh;width:100%;height:85%;margin-bottom:8vmin}#showcase,.elem{position:relative}.elem{width:90%;list-style:none;font-size:3.2vw;font-size:3.2vmax;transition:.2s;padding:1.8vmax 1.4vmax;margin-bottom:8px;animation:a .5s forwards;border-radius:16px}.elem:has(+*+*+:hover),.elem:has(+*+:hover),.elem:has(+:hover),.elem:hover+*,.elem:hover+*+*,.elem:hover+*+*+*{opacity:.3}.elem a{transition:.2s;color:#004b94}@keyframes a{to{color:rgb(255,255,255,80%)}}.elem a:hover{padding-left:3.2vmax;font-weight:500;+img,+svg{display:none}}.elem .hover-small-svg{scale:1.4}.elem img,.elem svg{fill:#000;pointer-events:none;z-index:1;opacity:0;position:absolute;width:200px;height:200px;transform:translate(-50%,-50%)}@media (max-width:1024px){.elem{font-size:4.2vmax;border:12px}.elem img,.elem svg{width:150px;height:150px}}@media (max-width:768px){.elem{border-radius:10px}.elem img,.elem svg{width:80px;height:80px}}
+#showcase{
+    margin-top: 8vh;
+    width: 100%;
+    height: 85%;
+    position: relative;
+    margin-bottom: 8vmin;
+}
+
+.elem{
+    width: 90%;
+    position: relative;
+    list-style: none;
+    font-size: 3.2vw;
+    font-size: 3.2vmax;
+    
+    transition: 200ms;
+
+    padding: 1.8vmax 1.4vmax;
+    margin-bottom: 8px;
+
+    animation: changeTextColor .5s forwards;
+
+    border-radius: 16px;
+}
+/* Elements next to hover elem  */
+.elem:hover + *,
+.elem:hover + * + *,
+.elem:hover + * + * + *,
+/* Elements before hover elem  */
+.elem:has(+ *:hover),
+.elem:has(+ * + *:hover),
+.elem:has(+ * + * + *:hover){
+    opacity: 0.3;
+}
+.elem a{
+    transition: 200ms;
+    color: #004b94;
+    
+}
+@keyframes showLine {
+    from{
+        width: 0%;
+        visibility: hidden;
+    } 
+    to{
+        color: #fff;
+        width: 100%;
+        visibility: visible;
+    }
+    
+}
+@keyframes changeTextColor {
+    to{
+        color: rgb(255, 255, 255, 80%);
+    }
+}
+.elem a:hover{
+    padding-left: 3.2vmax;
+    font-weight: 500;
+
+    + img, + svg{
+        display: none;
+    }
+}
+.elem .hover-small-svg{
+    scale: 1.4;
+}
+.elem svg, .elem img{
+    fill: #000;
+    pointer-events: none;
+    z-index: 9999999999;
+    opacity: 0;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);    
+}
+
+
+@media (max-width:1024px) {
+    .elem{
+        font-size: 4.2vmax;
+        border: 12px;
+    }
+    .elem svg, .elem img{
+        width: 150px;
+        height: 150px;
+    }
+}
+@media (max-width: 768px) {
+    .elem{
+        border-radius: 10px;
+    }
+    .elem svg, .elem img{
+        width: 80px;
+        height: 80px;
+    }
+}
