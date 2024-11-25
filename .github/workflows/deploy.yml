@@ -24,7 +24,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        npm install -g html-minifier uglify-js cssnano-cli cssnano-preset-advanced
+        npm install -g html-minifier uglify-js cssnano-cli cssnano-preset-advanced --save-dev
       
 
     - name: Minify Code
