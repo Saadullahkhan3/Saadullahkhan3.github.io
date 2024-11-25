@@ -1,9 +1,11 @@
 {
-    "preset": [
-      "advanced",
-      {
-        "reduceIdents": { "keyframes": false }
+    "cssnano": {
+        "preset": [
+        "advanced",
+        {
+          "reduceIdents": false
+        }
+      ]
       }
-    ]
   }
   
