@@ -2,7 +2,7 @@
     "preset": [
       "default",
       {
-        "reduceIdents": false
+        "reduceIdents": { "keyframes": false }
       }
     ]
   }
