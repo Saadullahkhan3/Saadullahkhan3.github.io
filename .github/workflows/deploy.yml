@@ -8,7 +8,6 @@ on:
 permissions:
   contents: write
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -24,22 +23,18 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        npm install -g html-minifier uglify-js cssnano-cli cssnano-preset-advanced --save-dev
-      
+        npm install -g html-minifier uglify-js csso-cli
 
-    # - name: Minify Code
-    #   run: |
-    #     html-minifier --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --minify-js --minify-css
-    #     cssnano ./css/style.css ./css/style.css  --config ./cssnano.config.json
-    #     cssnano ./css/image_hover.css ./css/image_hover.css  --config ./cssnano.config.json
-    #     cssnano ./css/infinite_scroll.css ./css/infinite_scroll.css  --config ./cssnano.config.json
-    #     uglifyjs ./script.js --compress --mangle --output ./script.js
+    - name: Minify Code
+      run: |
+        html-minifier --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --minify-js --minify-css
+        csso ./css/style.css --output ./css/style.css --restructure-off
+        csso ./css/image_hover.css --output ./css/image_hover.css --restructure-off
+        csso ./css/infinite_scroll.css --output ./css/infinite_scroll.css --restructure-off
+        uglifyjs ./script.js --compress --mangle --output ./script.js
 
     - name: Deploy to gh-pages
       uses: JamesIves/github-pages-deploy-action@4.1.0
       with:
         branch: gh-pages
         folder: .
-        
-
-
