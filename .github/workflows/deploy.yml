@@ -27,12 +27,21 @@ jobs:
 
     - name: Minify Code
       run: |
+        # Minify HTML
         html-minifier --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --minify-js --minify-css
+        
+        # Minify JS
         uglifyjs ./script.js --compress --mangle --output ./script.js 
-
-        perl -pe 's/\/\*.*?\*\///g; s/\s+/ /g; s/^\s+|\s+$//g' ./css/style.css > ./css/style.css
-        perl -pe 's/\/\*.*?\*\///g; s/\s+/ /g; s/^\s+|\s+$//g' ./css/infinite_scroll.css > ./css/infinite_scroll.css
-        perl -pe 's/\/\*.*?\*\///g; s/\s+/ /g; s/^\s+|\s+$//g' ./css/image_hover.css > ./css/image_hover.css
+    
+        # Minify CSS (create .min.css versions)
+        perl -0777 -pe 's/\/\*.*?\*\///gs; s/^\s+|\s+$//gm; s/[ \t]+/ /g;' ./css/style.css > ./css/style.min.css
+        perl -0777 -pe 's/\/\*.*?\*\///gs; s/^\s+|\s+$//gm; s/[ \t]+/ /g;' ./css/infinite_scroll.css > ./css/infinite_scroll.min.css
+        perl -0777 -pe 's/\/\*.*?\*\///gs; s/^\s+|\s+$//gm; s/[ \t]+/ /g;' ./css/image_hover.css > ./css/image_hover.min.css
+    
+        # Update HTML to reference minified CSS
+        find . -name "*.html" -exec sed -i 's/style\.css/style.min.css/g' {} +
+        find . -name "*.html" -exec sed -i 's/infinite_scroll\.css/infinite_scroll.min.css/g' {} +
+        find . -name "*.html" -exec sed -i 's/image_hover\.css/image_hover.min.css/g' {} +     
 
 
     - name: Deploy to gh-pages
