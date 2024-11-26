@@ -24,8 +24,7 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        npm install -g html-minifier uglify-js csso-cli
-      
+        npm install -g html-minifier uglify-js clean-css-cli      
 
     - name: Minify Code
       run: |
