@@ -23,15 +23,17 @@ jobs:
 
     - name: Install Dependencies
       run: |
-        npm install -g html-minifier uglify-js @node-minify/cli
+        npm install -g html-minifier uglify-js csso-cli @node-minify/cli
 
     - name: Minify Code
       run: |
         html-minifier --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --minify-js --minify-css
-        minify ./css/style.css > ./css/style.min.css
-        minify ./css/image_hover.css > ./css/image_hover.min.css
-        minify ./css/infinite_scroll.css > ./css/infinite_scroll.min.css
-        minify ./script.js > ./script.min.js
+        uglifyjs ./script.js --compress --mangle --output ./script.js 
+
+        perl -pe 's/\/\*.*?\*\///g; s/\s+/ /g; s/^\s+|\s+$//g' ./css/style.css > ./css/style.css
+        perl -pe 's/\/\*.*?\*\///g; s/\s+/ /g; s/^\s+|\s+$//g' ./css/infinite_scroll.css > ./css/infinite_scroll.css
+        perl -pe 's/\/\*.*?\*\///g; s/\s+/ /g; s/^\s+|\s+$//g' ./css/css/image_hover.css.css > ./css/css/image_hover.css.css
+
 
     - name: Deploy to gh-pages
       uses: JamesIves/github-pages-deploy-action@4.1.0
