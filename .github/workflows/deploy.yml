@@ -32,7 +32,7 @@ jobs:
 
         perl -pe 's/\/\*.*?\*\///g; s/\s+/ /g; s/^\s+|\s+$//g' ./css/style.css > ./css/style.css
         perl -pe 's/\/\*.*?\*\///g; s/\s+/ /g; s/^\s+|\s+$//g' ./css/infinite_scroll.css > ./css/infinite_scroll.css
-        perl -pe 's/\/\*.*?\*\///g; s/\s+/ /g; s/^\s+|\s+$//g' ./css/image_hover.css.css > ./css/image_hover.css.css
+        perl -pe 's/\/\*.*?\*\///g; s/\s+/ /g; s/^\s+|\s+$//g' ./css/image_hover.css > ./css/image_hover.css
 
 
     - name: Deploy to gh-pages
