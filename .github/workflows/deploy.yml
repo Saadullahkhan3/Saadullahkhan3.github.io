@@ -28,9 +28,9 @@ jobs:
     - name: Minify Code
       run: |
         html-minifier --input-dir . --output-dir . --file-ext html --collapse-whitespace --remove-comments --minify-js --minify-css
-        csso ./css/style.css --output ./css/style.css --restructure-off
-        csso ./css/image_hover.css --output ./css/image_hover.css --restructure-off
-        csso ./css/infinite_scroll.css --output ./css/infinite_scroll.css --restructure-off
+        csso ./css/style.css --output ./css/style.css --no-restructure
+        csso ./css/image_hover.css --output ./css/image_hover.css --no-restructure
+        csso ./css/infinite_scroll.css --output ./css/infinite_scroll.css --no-restructure
         uglifyjs ./script.js --compress --mangle --output ./script.js
 
     - name: Deploy to gh-pages
