@@ -31,7 +31,6 @@ jobs:
         csso ./css/style.css --output ./css/style.css
         csso ./css/image_hover.css --output ./css/image_hover.css
         csso ./css/infinite_scroll.css --output ./css/infinite_scroll.css
-        csso ./css/hover_image_up.css --output ./css/hover_image_up.css
         uglifyjs ./script.js --compress --mangle --output ./script.js
 
     - name: Deploy to gh-pages
