@@ -34,7 +34,7 @@ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(18.2px);
 -webkit-backdrop-filter: blur(18.2px);
 }body{
-background-image: url("../images/bg/straight-line-with-twisted-line-vertical-2.webp");
+background-image: url("../images/bg/background.webp");
 background-size: cover;
 background-position: center;
 }header{
