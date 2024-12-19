@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: #111;
+    color: white;
+
+}
+@font-face {
+    font-family: 'DS-Digital';
+    src: url('./DS-DIGI.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+main{
+    width: 100%;;
+}
+.digital-clock{
+    min-width: 100vw;
+    min-height: 40vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    justify-content: center;
+    gap: 20px;
+
+    border-radius: 50px;
+    
+    padding: 1rem;
+    
+    font-size: 34px;
+    font-family: 'DS-Digital', sans-serif;
+}
+.digital-clock:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff2d;
+    filter: blur(60px);
+}
+.clock {
+    /* width: clamp(fit-content, 60%, 60%); */
+    width: 60%;
+    height: 100%;
+    font-size: 14vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* gap: 10px; */
+}
+.calender{
+    height: 100%;
+    /* width: clamp(min-content, 35%, 35%); */
+    width: 30%;
+    
+    min-width: 25%;
+    font-size: 9vw;
+    padding-left: 1rem;
+}
+.top{
+    /* width: 100%; */
+}
+.bottom{
+    /* width: 100%; */
+}
+.ampm{
+    padding-left: 1vw;
+}
+
+.dev-area{
+    margin-top: 10vh;
+    width: 80%;
+    margin-inline: auto;
+}
+.dev-area ul{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 200;
+    font-size: 1.5rem;
+}
+.dev-area ul li{
+    display: flex;
+    list-style: none;
+    padding: 1rem 1rem;
+
+}
+.dev-area ul li input{
+    margin-right: 20px;
+    scale: 2;
+}
