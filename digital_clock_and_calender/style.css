@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+*::selection{
+    background: #7a7a7a;
+    color: #323232;
+}
 html, body{
     width: 100%;
     height: 100%;
@@ -32,7 +35,6 @@ main{
     position: relative;
     display: flex;
     align-items: center;
-    /* justify-content: space-between; */
     justify-content: center;
     gap: 20px;
 
@@ -56,30 +58,27 @@ main{
     filter: blur(60px);
 }
 .clock {
-    /* width: clamp(fit-content, 60%, 60%); */
     width: 60%;
     height: 100%;
     font-size: 14vw;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    /* gap: 10px; */
 }
 .calender{
     height: 100%;
-    /* width: clamp(min-content, 35%, 35%); */
     width: 30%;
     
     min-width: 25%;
     font-size: 9vw;
     padding-left: 1rem;
 }
-.top{
-    /* width: 100%; */
+/* .top{
+    width: 100%;
 }
 .bottom{
-    /* width: 100%; */
-}
+    width: 100%;
+} */
 .ampm{
     padding-left: 1vw;
 }
@@ -88,12 +87,12 @@ main{
     margin-top: 10vh;
     width: 80%;
     margin-inline: auto;
-}
-.dev-area ul{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 200;
     font-size: 1.5rem;
 }
+/* .dev-area ul{
+} */
 .dev-area ul li{
     display: flex;
     list-style: none;
@@ -103,4 +102,21 @@ main{
 .dev-area ul li input{
     margin-right: 20px;
     scale: 2;
+    border: none;
+}
+.dev-area p{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+.dev-area-svg-span{
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    svg{
+        fill: #636363;
+    }
+}
+.dev-area-text{
+    color: #636363;
 }
