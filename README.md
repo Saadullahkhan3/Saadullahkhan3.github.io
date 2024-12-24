@@ -9,6 +9,7 @@ Welcome to my portfolio website, uniquely designed and packed with fantastic eff
 💻 Tech Stack
 - ### **Development:**
     - JavaScript (JS)
+    - GSAP
     - CSS
     - HTML
 
