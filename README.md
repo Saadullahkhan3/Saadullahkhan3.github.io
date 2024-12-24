@@ -4,7 +4,16 @@ Welcome to my portfolio website, uniquely designed and packed with fantastic eff
 
 ### **Website Link:** https://saadullahkhan3.github.io/
 
+---
 
+🧩 Website Design Structure:
+- Glassmorphism technique for this website
+- Bounding effect in home, use GSAP stagger for stair like effect.
+- Infinite auto-scroll for skills section, also show a bouncy tag containing skill name on hover.
+- Card stacking in project section.
+- Image follower on hover effect in contact section
+
+---
 
 💻 Tech Stack
 - ### **Development:**
@@ -19,6 +28,7 @@ Welcome to my portfolio website, uniquely designed and packed with fantastic eff
     - GitHub Pages
         - Used to create pipeline to minify code of developed version for deployed version.
 
+---
 
 # **🌟 Website Overview**
 <img src="./readme_material/overall.png">
