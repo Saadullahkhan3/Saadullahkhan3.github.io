@@ -8,11 +8,11 @@ Welcome to my portfolio website, uniquely designed and packed with fantastic eff
 
 
 🧩 ## Design Highlights:
-🔹 Glassmorphism: A modern visual design technique for a sleek look.
-🔹 GSAP Effects: Bounding animation with staggered stair-like motion.
-🔹 Skills Section: Infinite auto-scroll with bouncy skill tags on hover.
-🔹 Projects Section: Interactive card-stacking effect.
-🔹 Contact Section: Image-follow hover effect for engaging visuals.
+- **Glassmorphism:** A modern visual design technique for a sleek look.
+- **GSAP Effects:** Bounding animation with staggered stair-like motion.
+- **Skills Section:** Infinite auto-scroll with bouncy skill tags on hover.
+- **Projects Section:** Interactive card-stacking effect.
+- **Contact Section:** Image-follow hover effect for engaging visuals.
 
 ---
 
