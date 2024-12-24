@@ -6,16 +6,17 @@ Welcome to my portfolio website, uniquely designed and packed with fantastic eff
 
 ---
 
-🧩 Website Design Structure:
-- Glassmorphism technique for this website
-- Bounding effect in home, use GSAP stagger for stair like effect.
-- Infinite auto-scroll for skills section, also show a bouncy tag containing skill name on hover.
-- Card stacking in project section.
-- Image follower on hover effect in contact section
+
+🧩 ## Design Highlights:
+🔹 Glassmorphism: A modern visual design technique for a sleek look.
+🔹 GSAP Effects: Bounding animation with staggered stair-like motion.
+🔹 Skills Section: Infinite auto-scroll with bouncy skill tags on hover.
+🔹 Projects Section: Interactive card-stacking effect.
+🔹 Contact Section: Image-follow hover effect for engaging visuals.
 
 ---
 
-💻 Tech Stack
+💻 ## Tech Stack
 - ### **Development:**
     - JavaScript (JS)
     - GSAP
