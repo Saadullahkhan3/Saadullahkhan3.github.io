@@ -4,11 +4,22 @@ Welcome to my portfolio website, uniquely designed and packed with fantastic eff
 
 ### **Website Link:** https://saadullahkhan3.github.io/
 
+---
 
 
-💻 Tech Stack
+## 🧩 Design Highlights:
+- **Glassmorphism:** A modern visual design technique for a sleek look.
+- **GSAP Effects:** Bounding animation with staggered stair-like motion.
+- **Skills Section:** Infinite auto-scroll with bouncy skill tags on hover.
+- **Projects Section:** Interactive card-stacking effect.
+- **Contact Section:** Image-follow hover effect for engaging visuals.
+
+---
+
+## 💻 Tech Stack
 - ### **Development:**
     - JavaScript (JS)
+    - GSAP
     - CSS
     - HTML
 
@@ -18,6 +29,7 @@ Welcome to my portfolio website, uniquely designed and packed with fantastic eff
     - GitHub Pages
         - Used to create pipeline to minify code of developed version for deployed version.
 
+---
 
 # **🌟 Website Overview**
 <img src="./readme_material/overall.png">
