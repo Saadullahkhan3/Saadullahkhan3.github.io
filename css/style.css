@@ -624,6 +624,7 @@ footer .footer-content p {
         padding: 1rem;
     }
     .project .thumbnail{
+        border-radius: 10px;
         min-width: 100%;
     }
 
