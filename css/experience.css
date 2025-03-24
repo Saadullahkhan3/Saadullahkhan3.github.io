@@ -1,0 +1,41 @@
+#experience{
+    width: 100%;
+	margin: 0 auto;
+}
+
+
+.exp-container{
+    --cards: 3;
+	--cardHeight: 20vh;
+	--cardTopPadding: 1.5em;
+	--cardMargin: 4vw;
+
+    padding: 2rem 0;
+    border-radius: 10px;
+    margin-bottom: 80px;
+
+    /* list-style: none; */
+	/* padding-left: 0; */
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	/* gap: var(--cardMargin); */
+	/* padding-bottom: calc(var(--cards) * var(--cardTopPadding)); */
+	/* margin-bottom: var(--cardMargin); */
+}
+
+.exp-card{
+    /* gap: 5%; */
+
+}
+.exp-card-body {
+	padding: 30px;
+	border-radius: 16px;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+	transition: all 0.5s;
+
+    max-height: min-content;
+}
+
