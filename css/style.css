@@ -75,7 +75,7 @@ header{
 
 header .logo{
     min-width: fit-content;
-    h1{
+    h2{
         border-bottom: 5px solid #000;
         border-top: 5px solid #000;
     }
