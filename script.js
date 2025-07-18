@@ -1,3 +1,48 @@
+// Theme Toggle Functionality
+const ThemeToggle = () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Apply initial theme
+    if (savedTheme) {
+        body.className = savedTheme;
+    } else if (systemPrefersDark) {
+        body.className = 'dark-mode';
+    } else {
+        body.className = 'light-mode';
+    }
+    
+    // Theme toggle click handler
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = body.className;
+        const newTheme = currentTheme === 'dark-mode' ? 'light-mode' : 'dark-mode';
+        
+        body.className = newTheme;
+        localStorage.setItem('theme', newTheme);
+        
+        // Add a subtle animation feedback
+        themeToggle.style.transform = 'scale(0.9)';
+        setTimeout(() => {
+            themeToggle.style.transform = 'scale(1)';
+        }, 150);
+    });
+    
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        // Only update if user hasn't manually set a theme
+        if (!localStorage.getItem('theme')) {
+            body.className = e.matches ? 'dark-mode' : 'light-mode';
+        }
+    });
+}
+
+// Initialize theme toggle
+ThemeToggle();
+
 // Header and Home
 const BoundingAnime = () => {
     var tl = gsap.timeline()
