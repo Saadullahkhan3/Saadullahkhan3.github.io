@@ -1,15 +1,24 @@
 #experience{
     width: 100%;
-	margin: 0 auto;
+
 }
 
 .experience {
-    padding: 20px;
+    /* padding: 20px; */
 }
 
-.section-heading {
-    font-size: 24px;
-    margin-bottom: 20px;
+:root{
+    --exp-left-size: 64px;
+    --exp-right-size: 1fr;
+    --mycolor: #0aa8a0;
+    --mycolor: #000;
+    /* --mycolor: #666; */
+    --exp-text-color: var(--mycolor);
+    --exp-illustrate-color: var(--mycolor);
+    /* #0aa8a0 */
+    /* #ccc */
+    /* --exp-text-color: #fff;
+    --exp-illustrate-color: #fff; */
 }
 
 .exp-container{
@@ -18,20 +27,24 @@
 	--cardTopPadding: 1.5em;
 	--cardMargin: 4vw;
 
-    padding: 2rem 0;
+    margin-top: 4rem;
+    /* padding: 2rem 0; */
     border-radius: 10px;
     margin-bottom: 80px;
 
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     gap: 20px;
+
+    width: 100%;
+    /* display: grid;
+    place-items: center; */
 }
 
 .exp-card {
-    /* border: 1px solid #dcdcdc; */
+    /* max-width: 1024px; */
     border-radius: 8px;
-    padding: 20px;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .exp-card-body {
@@ -45,14 +58,174 @@
     gap: 10px;
 }
 
-.exp-card-body h3 {
-    font-size: 20px;
+.exp-head{
+    width: 100%;
+    display: flex;
+}
+.exp-left{
+    width: var(--exp-left-size);
+}
+.exp-company-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--exp-left-size);
+    height: 100%;
+    img{
+        width: 100%;
+    }
+}
+.exp-right{
+    width: var(--exp-right-size);
+    padding: 0 0 0 20px;
+}
+.exp-head-details{
+    margin: auto 0;
+    width: 100%;
+}
+.exp-company-name{
+    font-size: 32px!important;
+    font-weight: 600;
     margin: 0;
 }
+.suk-company-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 100%;
 
-.exp-card-body p {
+    /* background: #494949cb; */
+}
+.suk-hire-btn{
+    padding: 0.8rem 1rem;
+    min-width: fit-content;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background: #000;
+    transition: 300ms ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    span{
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    
+    svg{
+        width: 32px;
+        height: 32px;
+        fill: #000;
+        transition: 200ms ease-in-out;
+    }
+}
+.suk-hire-btn:hover{
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    svg{
+        rotate: 20deg;
+    }
+}
+.exp-suk-card .exp-card-body{
+    /* position: relative; */
+}
+/* .exp-suk-card::before{
+    content: "SUK is my own Freelance Agency. Available for Freelance Projects!";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: #000;
+    padding: 10px 10px;
+    color: #fff;
+    text-align: center;
+} */
+.exp-suk-strip{
+    width: 100%;
+    /* height: 20px; */
+    background: #000;
+    padding: 10px 10px;
+    color: #fff;
+    text-align: center;
+    /* scale: 1.1; */
+    border-radius: 8px;
+
+    border-radius: 8px 8px 0 0;
+}
+.exp-suk-card {
+    position: relative;
+    /* overflow: hidden; Prevents content from overlapping */
+}
+.exp-card-body {
+    /* padding-top: 40px;  */
+}
+
+
+
+.exp-suk-strip::selection{
+    background: #fff;
+    color: #000;
+}
+.exp-total-time-and-job-type{
+    font-size: 18px;
     margin: 0;
-    color: #666;
+}
+.exp-job-type, .exp-total-time, .exp-job-timestamp{
+    margin: 0;
+    color: var(--exp-text-color);
+    font-size: 1.1rem;
+    margin: 0;
+}
+.exp-job-body{
+    width: 100%;
+}
+.exp-job-details{
+
+}
+.exp-job-level{
+    margin-bottom: 20px;
+    display: flex;
+}
+.exp-left-line-container{
+    width: var(--exp-left-size);
+
+    height: 100%;
+
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    position: relative;
+}
+.exp-left-line{
+    width: 3px;
+    /* height: clamp(40%, 70%, 100%); */
+    height: 80%;
+    height: 75%;
+    /* height: 72%; */
+    /* height: clamp(40%, 80%, 80%); */
+    background: var(--exp-illustrate-color);
+    transition: all 0.5s ease;
+}
+.exp-left-line-container::before{
+    --size: 14px;
+    content: '';
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    background: var(--exp-illustrate-color);
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.exp-job-body .exp-job-level:last-child .exp-left-line{
+    display: none;
+}
+
+.exp-job-level-title{
+    font-size: 24px;
+    margin: 0;
 }
 
 .exp-card-body ul {
@@ -63,5 +236,25 @@
 
 .exp-card-body ul li {
     margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 1.4rem;
 }
 
+
+
+@media (max-width: 768px) {
+    :root{
+        --exp-left-size: 48px;
+    }
+    .exp-left-line{
+        height: 85%;
+    }
+    .exp-card-body{
+        padding: 14px;
+    }
+}
+@media (max-width: 479px) {
+    .exp-left-line{
+        height: 90%;
+    }
+}

@@ -1,4 +1,4 @@
-// Header and Home
+/* ++++++++++ Header and Home ++++++++++ */
 const BoundingAnime = () => {
     var tl = gsap.timeline()
     
@@ -21,7 +21,7 @@ BoundingAnime()
 
 
 
-// Nav
+/* ++++++++++ Nav ++++++++++ */
 function monitorNavToAssignActiveClass(className, navSelector, offset = 250) {
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll(`${navSelector} a`);
@@ -43,7 +43,7 @@ monitorNavToAssignActiveClass("active-nav-link", 'header nav ul');
 
 
 
-// Skill Section
+/* ++++++++++ Skill Section ++++++++++ */
 function infiniteScroll(){
     const _infiniteScrollParent = document.querySelectorAll(".infinite-scroll"); 
 
@@ -65,7 +65,7 @@ infiniteScroll()
 
 
 
-// Project Section
+/* ++++++++++ Project Section ++++++++++ */
 const MouseFollowerFor3dImageEffect = (effectIntensity=10) => {
     let imageRotateTime;
 
@@ -105,7 +105,7 @@ MouseFollowerFor3dImageEffect(10)
 
 
 
-// Home Section 
+/* ++++++++++ Home Section  ++++++++++ */
 const TypeWriter = (textElementId, texts_arr, typingSpeed=100, pauseBetweenTexts=2000) => {
     // typingSpeed -> Time between each character (in ms)
     // pauseBetweenTexts -> Pause between each full text (in ms)
@@ -146,7 +146,7 @@ TypeWriter("text", texts_arr);
 
     
 
-// Contact Section
+/* ++++++++++ Contact Section ++++++++++ */
 const pictureHoverMover = () => {
 document.querySelectorAll(".elem").forEach(function (elem) {
     var rotate = 0;
@@ -174,10 +174,82 @@ document.querySelectorAll(".elem").forEach(function (elem) {
     });
 });
 }
-  
-  
 pictureHoverMover()
   
 
+/* ++++++++++ Auto Experience total time/date calculator ++++++++++ */
+const timeSeperatorElement = "∙";
+const calculateTotalTime = (startTimeElemTextContent, endTimeElemTextContent) => {
+    const startTime = new Date(startTimeElemTextContent);
+    const endTime = (endTimeElemTextContent
+                    .trim().toLowerCase() === "present" 
+                    ? new Date() :
+                    new Date(endTimeElemTextContent));
 
-// END OF SCRIPT
+    const totalYears = endTime.getFullYear() - startTime.getFullYear();
+
+    const totalMonths = totalYears * 12 + (endTime.getMonth() - startTime.getMonth());
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    
+    let totalTimeText = "";
+    if (years > 0) {
+        totalTimeText += `${years} yr${years > 1 ? 's' : ''} `;
+    }
+    if (months > 0) {
+        totalTimeText += `${months} mo${months > 1 ? 's' : ''}`;
+    }
+    // If less than a month, assume 1 month
+    else{
+        totalTimeText = "1 mo";
+    }
+
+    return totalTimeText.trim();
+}
+
+const allJobs = document.querySelectorAll(".exp-card");
+
+allJobs.forEach((job) => {
+    try{
+    /* Calculate the total job time */
+    const totalJobTime = job.querySelector(".exp-total-time");
+    
+    const startTimeElemTextContent = job.querySelector(".start-time");
+    const endTimeElemTextContent = job.querySelector(".end-time");
+
+    if (!startTimeElemTextContent || !endTimeElemTextContent){
+        console.log("SUK card just hit!");
+        // console.log("Start/End Time element not found");
+        return;
+    }
+    
+    const totalTimeText = calculateTotalTime(startTimeElemTextContent.textContent, endTimeElemTextContent.textContent);
+
+    totalJobTime.textContent = ` ${timeSeperatorElement} ${totalTimeText.trim()}`;
+
+    // Calculate the total time for each job level
+    const jobLevels = job.querySelectorAll(".exp-job-level");
+    jobLevels.forEach((jobLevel)=>{
+        const timeStampElem = jobLevel.querySelector(".exp-job-timestamp");
+
+        if (!timeStampElem){
+            console.log("TimeStamp element not found");
+            return;
+        }
+        
+        const startTimeElemTextContent = timeStampElem.textContent.split(" - ")[0];
+        const endTimeElemTextContent = timeStampElem.textContent.split(" - ")[1];
+
+        const totalTimeText = calculateTotalTime(startTimeElemTextContent, endTimeElemTextContent);
+        timeStampElem.textContent += ` ${timeSeperatorElement} ${totalTimeText.trim()}`;
+    });
+    }
+    catch(err){
+        console.log("SUK = Saadullah Khan!");
+    }
+
+});
+
+
+
+/* XXXXXXXXXX END OF SCRIPT XXXXXXXXXX */
