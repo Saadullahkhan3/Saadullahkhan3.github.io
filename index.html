@@ -25,10 +25,12 @@
 
     <!-- ------------------------------------------- -->
     <!-- Preload critical project thumbnails -->
-    <link rel="preload" as="image" href="./images/project/digital-ilm-1.webp">
+    <link rel="preload" as="image" href="./images/project/digital-ilm.png">
+    <link rel="preload" as="image" href="./images/project/portfolio.png">
     <link rel="preload" as="image" href="./images/project/landscape-1.webp">
     <link rel="preload" as="image" href="./images/project/product-order-and-database-manager-1.webp">
-    <link rel="preload" as="image" href="./images/bg/straight-line-with-twisted-line-vertical-2.webp">
+    <link rel="preload" as="image" href="./images/bg/background.webp">
+
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -52,7 +54,7 @@
 
     <header class="bg-glassmorphism">
         <div class="logo">
-            <h1>Saadullah Khan</h1>
+            <h2>Saadullah Khan</h2>
         </div>
     
         <nav>
@@ -78,8 +80,11 @@
           </div>
         </nav>
         </header>
+
+
+
     <main>
-        <!-- <section id="home" class="home">
+        <section id="home" class="home">
             <div class="home-content">
                 <div class="bounding name-heading">
                     <h1 class="primary-heading bounding-elem ">Saadullah Khan</h1>
@@ -112,45 +117,154 @@
                 </a>
 
             </div>
-        </section> -->
+        </section>
 
         <section id="experience" class="experience">
             <h2 class="section-heading">Experience</h2>
+
             <div class="exp-container">
-                <div class="exp-card">
-                    <div class="exp-card-body bg-glassmorphism">
-                        <h3>Full-Stack Web Developer</h3>
-                        <p>Freelance</p>
-                        <p>2020 - Present</p>
-                        <ul>
-                            <li>Developed and maintained websites for clients using Django, HTML, CSS, JavaScript, and SQL.</li>
-                            <li>Created responsive and user-friendly interfaces to enhance user experience.</li>
-                        </ul>
+
+                <!-- SUK - My Freelance Software Agency -->
+                <div class="exp-card exp-suk-card bg-glassmorphism">
+                    <!-- <div class="exp-suk-strip">SUK is my own Freelance Agency. Job title listed as Services. Available for Freelance Projects!</div> -->
+                    <div class="exp-suk-strip">SUK is my own Freelance Agency. Job title listed as Services. <i>Available for Freelance Projects!</i></div>
+                    <div class="exp-card-body ">
+                        <div class="exp-head">
+                            <div class="exp-left">
+                                <div class="exp-company-logo">
+                                    <img src="./images/experience/suk.png" alt="SUK company logo.">
+                                </div>
+                            </div>
+                            <div class="exp-right exp-head-details">
+                                <div class="suk-company-head">
+                                <div class="suk-company-right">
+                                    <h3 class="exp-company-name">SUK</h3>
+                                    <div class="exp-total-time-and-job-type">
+                                        <span class="exp-job-type">Full-Time ∙ Since Feb 2025</span>
+                                        <span class="exp-total-time"></span>
+                                    </div>
+                                </div>
+                                <a href="https://www.linkedin.com/in/saadullahkhan3/" target="_blank" class="suk-hire-btn"><span>Hire Me</span></a>
+                                <!-- <button class="suk-hire-btn"><span>Hire Me</span></button> -->
+                            </div>
+                            </div>
+                        </div>
+                        <div class="exp-job-body">
+
+
+                            <div class="exp-job-level">
+                                <div class="exp-left">
+                                <div class="exp-left-line-container">
+
+                                    <div class="exp-left-line"></div>
+                                </div>
+                            </div>
+                            <div class="exp-right exp-job-details">
+                                    <h4 class="exp-job-level-title">Automation</h4>
+                                    <p class="exp-job-type">Python, Git</p>
+                                    <p class="exp-job-timestamp">1 client delivered!</p>
+                                    <!-- <p class="exp-job-timestamp"><span>Feb 2025</span> - <span class="end-time">Present</span></p> -->
+                                    <ul>
+                                        <li>Designed and developed a <strong>Python-based OCR tool</strong> to process scanned images and extract text into structured <b>.docx</b> files.</li>
+                                        <li>Successfully processed <strong>350+</strong> pages for a client with <strong>97%+</strong> accuracy, ensuring <b>zero</b> client complaints.</li>
+                                        <li>Implemented <strong>Tesseract OCR</strong> for high-accuracy <strong>text recognition</strong> with pair to <strong>Poppler</strong> to handle client's PDF.</li>
+                                        <li>Delivered a solution that eliminated <b>repetitive</b> manual work, ensured <b>consistent</b> outputs, and saved the client <b>significant time.</b></li>
+                                    </ul>
+                                </div>
+                            </div>                            
+
+
+                            <div class="exp-job-level">
+                                <div class="exp-left">
+                                <div class="exp-left-line-container">
+
+                                    <div class="exp-left-line"></div>
+                                </div>
+                            </div>
+                            <div class="exp-right exp-job-details">
+                                    <h3 class="exp-job-level-title">Backend Developer</h3>
+                                    <p class="exp-job-type">Python, Django, DRF, SQlite, MongoDB</p>
+                                    <p class="exp-job-timestamp"><span class="start-time">Feb 2023</span> - <span>Sep 2024</span></p>
+                                    <p class="exp-job-timestamp">1 client delivered!</p>
+                                    <ul>                                        
+                                        <li>Built a <strong>Django-based POST API</strong> for <strong>text extraction</strong> from multiple file formats (.png, .jpeg/.jpg, .webp, and .pdf).</li>
+                                        <li>Integrated <strong>Tesseract OCR</strong> for text recognition and <strong>Poppler</strong> for reliable PDF handling, ensuring compatibility across common file types.</li>
+                                        <li>Developed a backend pipeline to return extracted text in <b>.docx</b> format, making it easily editable and accessible.</li>
+                                        <li>Solved a <b>real-world problem</b> for students by enabling them to instantly extract text from lecture slides, scanned notes, or PDF study materials, improving their study efficiency.</li>
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                            
+                        </div>
                     </div>
                 </div>
-                <div class="exp-card">
+
+
+                <!-- Template for other experiences | In case I forgot my own classes, just dev things, you know ^-^ -->
+                <!-- Don't Worry, we have CI pipeline for deployment, code will got compressed and all comments will also be removed -->
+                <!-- <div class="exp-card">
                     <div class="exp-card-body bg-glassmorphism">
-                        <h3>Software Engineer</h3>
-                        <p>ABC Company</p>
-                        <p>2018 - 2020</p>
-                        <ul>
-                            <li>Collaborated with cross-functional teams to develop and maintain software applications.</li>
-                            <li>Implemented new features and resolved bugs to improve application performance.</li>
-                        </ul>
+                        <div class="exp-head">
+                            <div class="exp-left">
+                                <div class="exp-company-logo">
+                                    <img src="./images/experience/suk.png" alt="SUK company logo.">
+                                </div>
+                            </div>
+                            <div class="exp-right exp-head-details">
+                                <h3 class="exp-company-name">SUK</h3>
+                                <div class="exp-total-time-and-job-type">
+                                    <span class="exp-job-type">Full-Time</span>
+                                    <span class="exp-total-time"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="exp-job-body">
+                            <div class="exp-job-level">
+                                <div class="exp-left">
+                                <div class="exp-left-line-container">
+                                    <div class="exp-left-line"></div>
+                                </div>
+                            </div>
+                            <div class="exp-right exp-job-details">
+                                    <h4 class="exp-job-level-title">Software Developer</h4>
+                                    <p class="exp-job-type">Freelance</p>
+                                    <p class="exp-job-timestamp"><span>Feb 2025</span> - <span class="end-time">Present</span></p>
+                                    <ul>
+                                        <li><strong>Backend Development:</strong> Implemented and optimized features in Django, enhancing scalability to meet client requirements.</li>
+                                        <li><strong>Automation:</strong> Developed a Python-based solution that significantly reduced manual workloads, saving clients considerable time and effort. </li>
+                                    </ul>
+                                </div>
+                            </div>                            
+
+                            <div class="exp-job-level">
+                                <div class="exp-left">
+                                <div class="exp-left-line-container">
+                                    <div class="exp-left-line"></div>
+                                </div>
+                            </div>
+                            <div class="exp-right exp-job-details">
+                                    <h3 class="exp-job-level-title">Software Developer</h3>
+                                    <p class="exp-job-type">Freelance</p>
+                                    <p class="exp-job-timestamp"><span class="start-time">Feb 2023</span> - <span>Sep 2024</span></p>
+                                    <ul>
+                                        <li>Developed and maintained websites for clients using Django, HTML, CSS, JavaScript, and SQL.</li>
+                                        <li>Created responsive and user-friendly interfaces to enhance user experience.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            
+                        </div>
                     </div>
-                </div>
-                <div class="exp-card">
-                    <div class="exp-card-body bg-glassmorphism">
-                        <h3>Web Developer</h3>
-                        <p>XYZ Company</p>
-                        <p>2016 - 2018</p>
-                        <ul>
-                            <li>Designed and developed websites using HTML, CSS, JavaScript, and Bootstrap.</li>
-                            <li>Ensured websites were optimized for speed and performance.</li>
-                        </ul>
-                    </div>
-                </div>
+                </div> -->
+
+
+
+
             </div>
+
         </section>
 
         <section id="skills" class="Skills">
