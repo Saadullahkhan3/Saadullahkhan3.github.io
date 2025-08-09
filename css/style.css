@@ -75,7 +75,7 @@ header{
 
 header .logo{
     min-width: fit-content;
-    h1{
+    h2{
         border-bottom: 5px solid #000;
         border-top: 5px solid #000;
     }
@@ -475,53 +475,6 @@ footer .footer-content p {
     header{
         padding: 1rem 3rem;
     }
-    main{
-        padding: 0 2rem;
-    }
-    .card-body {
-        padding: 14px;
-        display: flex;
-        flex-direction: column;
-    }
-    .project{
-        top: 11%;
-        /* display: flex;
-        flex-direction: column; */
-        gap: 20px;
-    }
-    .project .thumbnail{
-        margin-top: 18px;;
-        max-width: 60%;
-    }
-    .details{
-        padding: 0 1rem;
-        min-width: 100%;
-        padding: 10px 0 2rem 1rem;
-        /* height: 70%; */
-        /* width: 70%; */
-    
-        /* display: flex; */
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 18px;
-    }
-    
-    .about-me{
-        width: 90%;
-    }
-    .contact{
-        height: 50vh;
-    }
-}
-
-/* Your tablet portrait styles */
-@media (max-width: 767px) {
-    :root{
-        --font-nm-size: 1.4rem;
-    }
-    header{
-        padding: 1rem 2rem;
-    }
     .nav-links-container::before{
         content: "";
         width: 100%;
@@ -590,6 +543,53 @@ footer .footer-content p {
         top: 0;
         left: 0;
         z-index: 9;
+    }
+    main{
+        padding: 0 2rem;
+    }
+    .card-body {
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+    }
+    .project{
+        top: 11%;
+        /* display: flex;
+        flex-direction: column; */
+        gap: 20px;
+    }
+    .project .thumbnail{
+        margin-top: 18px;;
+        max-width: 60%;
+    }
+    .details{
+        padding: 0 1rem;
+        min-width: 100%;
+        padding: 10px 0 2rem 1rem;
+        /* height: 70%; */
+        /* width: 70%; */
+    
+        /* display: flex; */
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 18px;
+    }
+    
+    .about-me{
+        width: 90%;
+    }
+    .contact{
+        height: 50vh;
+    }
+}
+
+/* Your tablet portrait styles */
+@media (max-width: 767px) {
+    :root{
+        --font-nm-size: 1.4rem;
+    }
+    header{
+        padding: 1rem 2rem;
     }
     main{
         padding: 0 2rem;
